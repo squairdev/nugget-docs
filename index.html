@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!--MADE BY Squair. Github: https://github.com/squairdev -->
+<!--wow ascii art
+    .-------------------------------------.
+    |   ______                   _        |
+    |  / _____)                 (_)       |
+    | ( (____   ____ _   _ _____ _  ____  |
+    |  \____ \ / _  | | | (____ | |/ ___) |
+    |  _____) ) |_| | |_| / ___ | | |_    |
+    | (______/ \__  |____/\_____|_|_(_)   |
+    |             |_|                     |
+    '-------------------------------------'
+    -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nugget Setup & Help</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    body.dark {
+      background: linear-gradient(to bottom right, #1e1e1e, #2c2c2c);
+      color: #f0f0f0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+      transition: opacity 0.5s ease;
+    }
+
+    body.dark h1 {
+      color: #fff;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 30px 20px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      transition: all 0.5s ease;
+    }
+
+    body.dark .form-container {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    body.dark label {
+      color: #ccc;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor:default;
+      transition: background-color 0.3s ease;
+    }
+
+    .dark-toggle {
+    width: 2%;
+    position: fixed;
+    bottom: 20px;
+    right:20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+
+    .dropdown-section {
+      display: none;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 80vw;
+    }
+
+    .dropdown {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 15px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .dropdown-content {
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      padding: 25px;
+      display: none;
+      margin-bottom: 10px;
+    }
+
+    body.dark .dropdown-content {
+      background-color: #444;
+      color: white;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .form-container {
+        padding: 20px 15px;
+      }
+    }
+    a{
+        text-decoration: none;
+        color:#007bff;
+    }
+  </style>
+</head>
+<body class="dark">
+    <!--START OF APPLY-->
+    <h1 id="main-title">Nugget Setup & Help</h1>
+    <div class="form-container" id="formBox">
+      <div class="form-group">
+        <label for="device">iPhone or iPad</label>
+        <select id="device" name="device">
+          <option value="">Select your device</option>
+          <option value="iphone">iPhone</option>
+          <option value="ipad">iPad</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="ios-version">iOS Version</label>
+        <select id="ios-version" name="ios-version">
+          <option value="">Select iOS version</option>
+          <option value="18up">iOS 18.3+</option>
+          <option value="3db">iOS 18.2 Developer Beta 3</option>
+          <option value="2db">iOS 18.2 Developer Beta 2</option>
+          <option value="18.1.1">iOS 18.1.1</option>
+          <option value="18">iOS 18</option>
+          <option value="17.7.6">iOS 17.7.6</option>
+          <option value="17">iOS 17</option>
+          <option value="16">iOS 16</option>
+          <option value="16under">under iOS 16</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="os">MacOS Windows</label>
+        <select id="os" name="os">
+          <option value="">Select OS</option>
+          <option value="mac">MacOS</option>
+          <option value="windows">Windows</option>
+        </select>
+      </div>
+      <button id="submitBtn" type="submit">Submit</button>
+    </div>
+    <style>
+        .form-container {
+          transition: max-height 0.5s ease, opacity 0.5s ease;
+          overflow: hidden;
+          max-height: 1000px;
+          opacity: 1;
+        }
+      
+        .form-container.collapsed {
+          max-height: 0;
+          opacity: 0;
+          pointer-events: none;
+        }
+      
+        #toggleFormBtn {
+          padding: 6px 12px;
+          font-size: 14px;
+          cursor: pointer;
+        }
+      </style>
+      <!--END OF APPLY-->
+    
+    
+      
+
+  <div class="dropdown-section" id="results">
+    <button class="dropdown" id="setupBtn">Nugget Setup</button>
+    <div class="dropdown-content" id="setupWin">How to setup Nugget on Windows<br><br>
+        Download and install <a href="https://apps.microsoft.com/detail/9np83lwlpz9k">Apple Devices</a> (If the application is having problems, try <a href="https://support.apple.com/en-us/106372">iTunes</a>).<br>
+        After one of the applications have been installed, open it and connect your device (Use a cable that is able to transfer data). <br>
+        Make sure "Find My" is off by going to settings > Security and Privacy > Stolen Device Protection > and disable (Not needed for iPad users).<br>
+        Next, go to settings > [Your name] > Find My (Find My iPad on iPads) > turn off. This is required for Nugget to apply.
+        Use the port on the back of your pc (if applicable). Download the <a href="https://github.com/leminlimez/Nugget/releases/latest">latest release of Nugget</a>.<br>
+        Extract the contents of the .zip file into a folder. Type "Win+r" then type "cmd" and click enter.<br>
+        Inside the "Nugget-Windows>Nugget" folder, drag your "Nugget.exe" file into the command prompt.<br>
+        Click enter, and wait for Nugget to open. If you connected your device correctly, it should show your device.<br><br>
+        "<span style="color: yellow;">Partially Supported.</span>": Your iOS version does not support Mobilegestalt tweaks, though all other options are available.<br>
+        "<span style="color: limegreen;">Supported!</span>": Your iOS version supports Mobilegestalt tweaks.<br>
+        "<span style="color: red;">Not Supported.</span>": Either your iOS does not support any nugget tweaks, or your device is too old.<br>
+        For more help, watch <a href="https://youtu.be/Qs1V2dCZ6E8">this tutorial</a>.
+    </div>
+    <div class="dropdown-content" id="setupMac">How to setup Nugget on MacOS<br><br>
+        Open Finder and connect your device (Use a cable that is able to transfer data). <br>
+        Make sure "Find My" is off on your device by going to settings > Security and Privacy > Stolen Device Protection > and disable (This setting is not on iPad).<br>
+        Next, go to settings > [Your name] > Find My (Find My iPad on iPads) > turn off. This is required for Nugget to apply.
+        Use the port on the back of your pc (if applicable). Download the <a href="https://github.com/leminlimez/Nugget/releases/latest">latest release of Nugget</a>.<br>
+        Extract the .zip contents to a new folder. Inside the folder, double-click on "Nugget.app".<br>
+        If you get a popup, click "Close". Go to System Settings>Privacy and Security>and click "Open anyways".<br>
+        Click open, and wait for Nugget to open. If you connected your device correctly, it should show your device.<br><br>
+        "<span style="color: yellow;">Partially Supported.</span>": Your iOS version does not support Mobilegestalt tweaks, though all other options are available.<br>
+        "<span style="color: limegreen;">Supported!</span>": Your iOS version supports Mobilegestalt tweaks.<br>
+        "<span style="color: red;">Not Supported.</span>": Either your iOS does not support any nugget tweaks, or your device is too old.<br>
+    </div>
+    <!--MGS INFO-->
+    <button class="dropdown" id="mgsBtn">Mobilegestalt</button>
+    <div class="dropdown-content" id="mobilegestalt">✅ Mobilegestalt is supported on this iOS/iPadOS version.<br><br>
+        Run <a href="https://www.icloud.com/shortcuts/2f3b0dc8141f49119b0d5bc039482f6b">this shortcut</a>
+        on your device and save the file. Share the file you saved (mobilegestalt.plist) to your pc and open Nugget.<br>
+        On nugget, navigate to the Apply tab. Upload your mobilegestalt file and enable any tweaks you would like.</div>
+    <div class="dropdown-content" id="mobilegestaltNot">❌ Mobilegestalt is not supported on this iOS/iPadOS version.<br>Supported versions: <br>iOS/iPadOS versions 16-18.2 Developer Beta 2. (excluding iOS/iPadOS 17.7.6)</div>
+    
+    <!--POSTERBOARD INFO-->
+    <button class="dropdown" id="pbBtn">Posterboard</button>
+    <div class="dropdown-content" id="posterboard">✅ Posterboard is supported on this iOS/iPadOS version. <br><br>
+        You can get wallpapers from <a href="https://cowabun.ga/wallpapers">here</a>, or <a href="https://discord.gg/xB9Y9rNx3n">this discord server</a>.<br>
+        Download the '.tendies' file that you would like, then open Nugget. Navigate to the Posterboard section and<br>
+        click 'Import .tendies' (if you cannot click it, check the 'modify' box at the top of the screen).
+        Go to the Apply tab and click 'Apply'. If you need more help, watch <a href="https://youtu.be/gyxlNpRfcwA">this tutorial</a>.</div>
+    <div class="dropdown-content" id="posterboardNot">❌ Posterboard is not supported on this iOS/iPadOS version.<br>Supported versions: iOS/iPadOS 16+.</div>
+    <!--AI INFO-->
+    <button class="dropdown" id="aiBtn">Apple Intelligence</button>
+    <div class="dropdown-content" id="appleIntelligence">✅ Apple Intelligence is supported on this iOS/iPadOS version.<br><br>
+        Go to the Feature Flags tab, and check "Enable Appple Intelligence". Next, go to the Eligibility tab, <br>
+        and check "Enable Apple Intelligence". Then check "Spoof device model" (if applicable) and choose<br>
+        a device to spoof to. (Newest device reccomended). Go to the apply section, and make sure you have<br>
+        your <a href="#mobilegestalt">mobilegestalt file</a>. Click apply.</div>
+    <div class="dropdown-content" id="appleIntelligenceNot">❌ Apple Intelligence is not supported on this iOS/iPadOS version.<br>
+        Supported versions:<br>
+        iOS/iPadOS 18.1.1-18.2 Developer Beta 2.</div>
+</div>
+  <div style="text-align:center; margin-top: 10px;">
+    <button id="toggleFormBtn">Hide Setup Panel</button>
+  </div>
+  <script>
+    const toggleButton = document.getElementById("toggleFormBtn");
+    const Submit = document.getElementById("submitBtn");
+    const formBox = document.getElementById("formBox");
+  
+    toggleButton.addEventListener("click", () => {
+      const isCollapsed = formBox.classList.toggle("collapsed");
+      toggleButton.textContent = isCollapsed ? "Show Setup Panel" : "Hide Setup Panel";
+    });
+    Submit.addEventListener("click", () => {
+      const isCollapsed = formBox.classList.toggle("collapsed");
+      toggleButton.textContent = isCollapsed ? "Show Setup Panel" : "Hide Setup Panel";
+    });
+  </script>
+
+
+  <button class="dark-toggle" onclick="toggleDarkMode()"><img src="/image/Theme.svg"></button>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+
+    function parseQueryParams() {
+      const params = new URLSearchParams(window.location.search);
+      return {
+        device: params.get('device') || '',
+        ios: params.get('ios-version') || '',
+        os: params.get('os') || ''
+      };
+    }
+
+    function showSections(ios, os) {
+      const mgSupported = ['2db', '18.1.1', '18', '17', '16', '16under'];
+      const aiSupported = ['2db', '18.1.1'];
+      const pbSupported = ['18up', '3db', '2db', '18.1.1', '18', '17.7.6', '17', '16'];
+      const iswin = ['windows']
+      document.getElementById("mgsBtn").style.display = 'block';
+      document.getElementById("pbBtn").style.display = 'block';
+      document.getElementById("setupBtn").style.display = 'block';
+      if (mgSupported.includes(ios)) {
+        document.getElementById('mobilegestalt').style.display = 'block';
+        document.getElementById('mobilegestaltNot').style.display = 'none';
+      } else {
+        document.getElementById('mobilegestaltNot').style.display = 'block'; 
+        document.getElementById('mobilegestalt').style.display = 'none'; 
+      }
+      if (aiSupported.includes(ios)) {
+        document.getElementById('appleIntelligence').style.display = 'block';
+        document.getElementById('appleIntelligenceNot').style.display = 'none';
+        } else {
+        document.getElementById('appleIntelligenceNot').style.display = 'block';
+        document.getElementById('appleIntelligence').style.display = 'none';
+        }
+
+      if (pbSupported.includes(ios)) {
+        document.getElementById('posterboard').style.display = 'block';
+        document.getElementById('posterboardNot').style.display = 'none';
+        } else {
+        document.getElementById('posterboardNot').style.display = 'block';
+        document.getElementById('posterboard').style.display = 'none';
+        }
+
+        document.getElementById('setupWin').style.display = os === 'windows' ? 'block' : 'none';
+        document.getElementById('setupMac').style.display = os === 'mac' ? 'block' : 'none';
+
+        document.getElementById('results').style.display = 'block';
+
+
+    }
+
+    function handleSubmit(device, ios, os) {
+      const query = `?device=${encodeURIComponent(device)}&ios-version=${encodeURIComponent(ios)}&os=${encodeURIComponent(os)}`;
+      history.replaceState(null, '', query);
+
+      const formBox = document.getElementById('formBox');
+      formBox.style.position = 'absolute';
+      formBox.style.top = '20px';
+      formBox.style.left = '20px';
+      formBox.style.transform = 'scale(0.8)';
+      formBox.style.width = '300px';
+      formBox.style.maxWidth = '300px';
+
+      const title = document.getElementById('main-title');
+      if (title) title.remove();
+
+      showSections(ios);
+    }
+
+    document.getElementById('submitBtn').addEventListener('click', () => {
+    const ios = document.getElementById('ios-version').value;
+    const os = document.getElementById('os').value;
+    showSections(ios, os);
+    });
+
+
+
+
+    document.getElementById('setupBtn').onclick = function() {
+  const dropdown = document.getElementById('setupDropdown');
+  dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+};
+
+window.addEventListener('DOMContentLoaded', () => {
+  const { device, ios, os } = parseQueryParams();
+
+  document.getElementById('device').value = device;
+  document.getElementById('ios-version').value = ios;
+  document.getElementById('os').value = os;
+
+  if (ios && os) {
+    showSections(ios, os);
+  }
+});
+
+  </script>
+  <footer><p>Made by Squair.</p></footer>
+</body>
+</html>
+
