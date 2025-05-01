@@ -15,7 +15,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nugget Setup & Help</title>
+  <title>Nugget Helper</title>
+  <meta content="Nugget Helper" property="og:title" />
+  <meta content="How to setup and use Nugget." property="og:description" />
+  <meta content="https://squair.is-a.dev/nugget-docs" property="og:url" />
+  <meta content="https://squair.is-a.dev/favicon.png" property="og:image" />
+  <meta content="#1875d2" data-react-helmet="true" name="theme-color" />
+  <link rel="icon" type="image/x-icon" href="https://squair.is-a.dev/favicon.png">
   <style>
     * {
       box-sizing: border-box;
@@ -25,7 +31,8 @@
 
     body {
       margin: 0;
-      background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+      background: #ffffff;
+background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(196, 205, 255, 1) 100%);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -35,7 +42,8 @@
     }
 
     body.dark {
-      background: linear-gradient(to bottom right, #1e1e1e, #2c2c2c);
+      background: #020024;
+      background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(1, 9, 82, 1) 100%);
       color: #f0f0f0;
     }
 
@@ -163,7 +171,7 @@
 </head>
 <body class="dark">
     <!--START OF APPLY-->
-    <h1 id="main-title">Nugget Setup & Help</h1>
+    <h1 id="main-title">Nugget Helper</h1>
     <div class="form-container" id="formBox">
       <div class="form-group">
         <label for="device">iPhone or iPad</label>
@@ -183,7 +191,7 @@
           <option value="18.1.1">iOS 18.1.1</option>
           <option value="18">iOS 18</option>
           <option value="17.7.6">iOS 17.7.6</option>
-          <option value="17">iOS 17</option>
+          <option value="17">iOS 17-17.7.5</option>
           <option value="16">iOS 16</option>
           <option value="16under">under iOS 16</option>
         </select>
@@ -225,7 +233,7 @@
 
   <div class="dropdown-section" id="results">
     <button class="dropdown" id="setupBtn">Nugget Setup</button>
-    <div class="dropdown-content" id="setupWin">How to setup Nugget on Windows<br><br>
+    <div class="dropdown-content" id="setupWin"><span style="font-size: 25px;">How to setup Nugget on Windows</span><br><br>
         Download and install <a href="https://apps.microsoft.com/detail/9np83lwlpz9k">Apple Devices</a> (If the application is having problems, try <a href="https://support.apple.com/en-us/106372">iTunes</a>).<br>
         After one of the applications have been installed, open it and connect your device (Use a cable that is able to transfer data). <br>
         Make sure "Find My" is off by going to settings > Security and Privacy > Stolen Device Protection > and disable (Not needed for iPad users).<br>
@@ -239,7 +247,7 @@
         "<span style="color: red;">Not Supported.</span>": Either your iOS does not support any nugget tweaks, or your device is too old.<br>
         For more help, watch <a href="https://youtu.be/Qs1V2dCZ6E8">this tutorial</a>.
     </div>
-    <div class="dropdown-content" id="setupMac">How to setup Nugget on MacOS<br><br>
+    <div class="dropdown-content" id="setupMac"><span style="font-size: 25px;">How to setup Nugget on MacOS</span><br><br>
         Open Finder and connect your device (Use a cable that is able to transfer data). <br>
         Make sure "Find My" is off on your device by going to settings > Security and Privacy > Stolen Device Protection > and disable (This setting is not on iPad).<br>
         Next, go to settings > [Your name] > Find My (Find My iPad on iPads) > turn off. This is required for Nugget to apply.
@@ -253,30 +261,40 @@
     </div>
     <!--MGS INFO-->
     <button class="dropdown" id="mgsBtn">Mobilegestalt</button>
-    <div class="dropdown-content" id="mobilegestalt">✅ Mobilegestalt is supported on this iOS/iPadOS version.<br><br>
+    <div class="dropdown-content" id="mobilegestalt"><span style="font-size:25px;">✅ Mobilegestalt is supported on this iOS/iPadOS version.</span><br><br>
         Run <a href="https://www.icloud.com/shortcuts/2f3b0dc8141f49119b0d5bc039482f6b">this shortcut</a>
         on your device and save the file. Share the file you saved (mobilegestalt.plist) to your pc and open Nugget.<br>
         On nugget, navigate to the Apply tab. Upload your mobilegestalt file and enable any tweaks you would like.</div>
-    <div class="dropdown-content" id="mobilegestaltNot">❌ Mobilegestalt is not supported on this iOS/iPadOS version.<br>Supported versions: <br>iOS/iPadOS versions 16-18.2 Developer Beta 2. (excluding iOS/iPadOS 17.7.6)</div>
+    <div class="dropdown-content" id="mobilegestaltNot"><span style="font-size:25px;">❌ Mobilegestalt is not supported on this iOS/iPadOS version.</span><br><br>Supported versions: <br>iOS/iPadOS versions 16-18.2 Developer Beta 2. (excluding iOS/iPadOS 17.7.6)</div>
     
     <!--POSTERBOARD INFO-->
     <button class="dropdown" id="pbBtn">Posterboard</button>
-    <div class="dropdown-content" id="posterboard">✅ Posterboard is supported on this iOS/iPadOS version. <br><br>
+    <div class="dropdown-content" id="posterboard"><span style="font-size:25px;">✅ Posterboard is supported on this iOS/iPadOS version.</span><br><br>
         You can get wallpapers from <a href="https://cowabun.ga/wallpapers">here</a>, or <a href="https://discord.gg/xB9Y9rNx3n">this discord server</a>.<br>
         Download the '.tendies' file that you would like, then open Nugget. Navigate to the Posterboard section and<br>
         click 'Import .tendies' (if you cannot click it, check the 'modify' box at the top of the screen).
         Go to the Apply tab and click 'Apply'. If you need more help, watch <a href="https://youtu.be/gyxlNpRfcwA">this tutorial</a>.</div>
-    <div class="dropdown-content" id="posterboardNot">❌ Posterboard is not supported on this iOS/iPadOS version.<br>Supported versions: iOS/iPadOS 16+.</div>
+    <div class="dropdown-content" id="posterboardNot"><span style="font-size:25px;">❌ Posterboard is not supported on this iOS/iPadOS version.</span><br><br>Supported versions: iOS/iPadOS 16+.</div>
     <!--AI INFO-->
     <button class="dropdown" id="aiBtn">Apple Intelligence</button>
-    <div class="dropdown-content" id="appleIntelligence">✅ Apple Intelligence is supported on this iOS/iPadOS version.<br><br>
+    <div class="dropdown-content" id="appleIntelligence"><span style="font-size:25px;">✅ Apple Intelligence is supported on this iOS/iPadOS version.</span><br><br>
         Go to the Feature Flags tab, and check "Enable Appple Intelligence". Next, go to the Eligibility tab, <br>
         and check "Enable Apple Intelligence". Then check "Spoof device model" (if applicable) and choose<br>
         a device to spoof to. (Newest device reccomended). Go to the apply section, and make sure you have<br>
-        your <a href="#mobilegestalt">mobilegestalt file</a>. Click apply.</div>
-    <div class="dropdown-content" id="appleIntelligenceNot">❌ Apple Intelligence is not supported on this iOS/iPadOS version.<br>
+        your <a href="#mobilegestalt">mobilegestalt.plist file</a>. Click apply.</div>
+    <div class="dropdown-content" id="appleIntelligenceNot"><span style="font-size:25px;">❌ Apple Intelligence is not supported on this iOS/iPadOS version.</span><br><br>
         Supported versions:<br>
-        iOS/iPadOS 18.1.1-18.2 Developer Beta 2.</div>
+        iOS/iPadOS 18.1.1-18.2 Developer Beta 2.
+    </div>
+    <!--DI INFO-->
+    <button class="dropdown" id="diBtn">Dynamic Island</button>
+    <div class="dropdown-content" id="dynamicIsland"><span style="font-size:25px;">✅ Dynamic Island is supported on this iOS/iPadOS version.</span><br><br>
+        Go to the Mobilegestalt tab. Spoof your device to the latest model with Dynamic Island. <br>
+        Here, you can also enable any other Mobilegestalt tweaks. Once done, go to the Apply tab and upload<br>
+        your <a href="#mgsBtn">mobilegestalt.plist file</a>, then click Apply.</div>
+    <div class="dropdown-content" id="dynamicIslandNot"><span style="font-size:25px;">❌ Dynamic Island is not supported on this iOS/iPadOS version.</span><br><br>
+        Supported versions:<br>
+        iOS/iPadOS 17-18.2 Developer Beta 2.</div>
 </div>
   <div style="text-align:center; margin-top: 10px;">
     <button id="toggleFormBtn">Hide Setup Panel</button>
@@ -297,7 +315,7 @@
   </script>
 
 
-  <button class="dark-toggle" onclick="toggleDarkMode()"><img src="nugget-docs/image/Theme.svg"></button>
+  <button class="dark-toggle" onclick="toggleDarkMode()"><img src="https://squair.is-a.dev/nugget-docs/image/Theme.svg"></button>
 
   <script>
     function toggleDarkMode() {
@@ -316,6 +334,7 @@
     function showSections(ios, os) {
       const mgSupported = ['2db', '18.1.1', '18', '17', '16', '16under'];
       const aiSupported = ['2db', '18.1.1'];
+      const diSupported = ['17', '18', '18.1.1', '2db']
       const pbSupported = ['18up', '3db', '2db', '18.1.1', '18', '17.7.6', '17', '16'];
       const iswin = ['windows']
       document.getElementById("mgsBtn").style.display = 'block';
@@ -334,7 +353,14 @@
         } else {
         document.getElementById('appleIntelligenceNot').style.display = 'block';
         document.getElementById('appleIntelligence').style.display = 'none';
-        }
+      }
+      if (diSupported.includes(ios)) {
+        document.getElementById('dynamicIsland').style.display = 'block';
+        document.getElementById('dynamicIslandNot').style.display = 'none';
+        } else {
+        document.getElementById('dynamicIslandNot').style.display = 'block';
+        document.getElementById('dynamicIsland').style.display = 'none';
+      }
 
       if (pbSupported.includes(ios)) {
         document.getElementById('posterboard').style.display = 'block';
@@ -397,7 +423,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
   </script>
-  <footer><p>Made by Squair.</p></footer>
+  <footer style="text-align: center;"><p>Made by <a href="https://squair.is-a.dev/">Squair</a> (Glixed).</p><p>Join the <a href="https://discord.gg/cowabunga/">Discord server</a>.</p></footer>
 </body>
 </html>
 
