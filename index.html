@@ -22,156 +22,11 @@
   <meta content="https://squair.is-a.dev/favicon.png" property="og:image" />
   <meta content="#1875d2" data-react-helmet="true" name="theme-color" />
   <link rel="icon" type="image/x-icon" href="https://squair.is-a.dev/favicon.png">
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    body {
-      margin: 0;
-      background: #ffffff;
-background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(196, 205, 255, 1) 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
-
-    body.dark {
-      background: #020024;
-      background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(1, 9, 82, 1) 100%);
-      color: #f0f0f0;
-    }
-
-    h1 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 30px;
-      transition: opacity 0.5s ease;
-    }
-
-    body.dark h1 {
-      color: #fff;
-    }
-
-    .form-container {
-      background-color: white;
-      padding: 30px 20px;
-      border-radius: 20px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 400px;
-      transition: all 0.5s ease;
-    }
-
-    body.dark .form-container {
-      background-color: #333;
-      color: #fff;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-      color: #444;
-    }
-
-    body.dark label {
-      color: #ccc;
-    }
-
-    select {
-      width: 100%;
-      padding: 10px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-
-    button {
-      width: 100%;
-      padding: 12px;
-      background-color: #007bff;
-      color: white;
-      font-size: 1rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 12px;
-      cursor:default;
-      transition: background-color 0.3s ease;
-    }
-
-    .dark-toggle {
-    width: 2%;
-    position: fixed;
-    bottom: 20px;
-    right:20px;
-    background: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 14px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.9rem;
-  }
-
-    .dropdown-section {
-      display: none;
-      margin-top: 20px;
-      width: 100%;
-      max-width: 80vw;
-    }
-
-    .dropdown {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      padding: 15px;
-      font-size: 1.1rem;
-      cursor: pointer;
-      margin-bottom: 10px;
-      text-align: left;
-    }
-
-    .dropdown-content {
-      background-color: #f9f9f9;
-      border-radius: 10px;
-      padding: 25px;
-      display: none;
-      margin-bottom: 10px;
-    }
-
-    body.dark .dropdown-content {
-      background-color: #444;
-      color: white;
-    }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.5rem;
-      }
-      .form-container {
-        padding: 20px 15px;
-      }
-    }
-    a{
-        text-decoration: none;
-        color:#007bff;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark">
     <!--START OF APPLY-->
-    <h1 id="main-title">Nugget Helper</h1>
+    <h1 id="main-title">Nugget Helper<br><button style="transform: translateY(3px); cursor: pointer; padding: 6px; width: 100px;" onclick="window.open('errors/').focus();">Errors</button></h1>
     <div class="form-container" id="formBox">
       <div class="form-group">
         <label for="device">iPhone or iPad</label>
@@ -197,7 +52,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(196, 205, 25
         </select>
       </div>
       <div class="form-group">
-        <label for="os">MacOS Windows</label>
+        <label for="os">MacOS or Windows</label>
         <select id="os" name="os">
           <option value="">Select OS</option>
           <option value="mac">MacOS</option>
@@ -206,34 +61,14 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(196, 205, 25
       </div>
       <button id="submitBtn" type="submit">Submit</button>
     </div>
-    <style>
-        .form-container {
-          transition: max-height 0.5s ease, opacity 0.5s ease;
-          overflow: hidden;
-          max-height: 1000px;
-          opacity: 1;
-        }
-      
-        .form-container.collapsed {
-          max-height: 0;
-          opacity: 0;
-          pointer-events: none;
-        }
-      
-        #toggleFormBtn {
-          padding: 6px 12px;
-          font-size: 14px;
-          cursor: pointer;
-        }
-      </style>
       <!--END OF APPLY-->
     
     
       
 
   <div class="dropdown-section" id="results">
-    <button class="dropdown" id="setupBtn">Nugget Setup</button>
-    <div class="dropdown-content" id="setupWin"><span style="font-size: 25px;">How to setup Nugget on Windows</span><br><br>
+    <button class="dropdown" id="setupBtn"><span class="tag">#</span>Nugget Setup</button>
+    <div class="dropdown-content" id="setupWin"><span style="font-size: 25px;">🪟 How to setup Nugget on Windows</span><br><br>
         Download and install <a href="https://apps.microsoft.com/detail/9np83lwlpz9k">Apple Devices</a> (If the application is having problems, try <a href="https://support.apple.com/en-us/106372">iTunes</a>).<br>
         After one of the applications have been installed, open it and connect your device (Use a cable that is able to transfer data). <br>
         Make sure "Find My" is off by going to settings > Security and Privacy > Stolen Device Protection > and disable (Not needed for iPad users).<br>
@@ -247,7 +82,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(196, 205, 25
         "<span style="color: red;">Not Supported.</span>": Either your iOS does not support any nugget tweaks, or your device is too old.<br>
         For more help, watch <a href="https://youtu.be/Qs1V2dCZ6E8">this tutorial</a>.
     </div>
-    <div class="dropdown-content" id="setupMac"><span style="font-size: 25px;">How to setup Nugget on MacOS</span><br><br>
+    <div class="dropdown-content" id="setupMac"><span style="font-size: 25px;">🍎 How to setup Nugget on MacOS</span><br><br>
         Open Finder and connect your device (Use a cable that is able to transfer data). <br>
         Make sure "Find My" is off on your device by going to settings > Security and Privacy > Stolen Device Protection > and disable (This setting is not on iPad).<br>
         Next, go to settings > [Your name] > Find My (Find My iPad on iPads) > turn off. This is required for Nugget to apply.
@@ -260,7 +95,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(196, 205, 25
         "<span style="color: red;">Not Supported.</span>": Either your iOS does not support any nugget tweaks, or your device is too old.<br>
     </div>
     <!--MGS INFO-->
-    <button class="dropdown" id="mgsBtn">Mobilegestalt</button>
+    <button class="dropdown" id="mgsBtn"><span class="tag">#</span>Mobilegestalt</button>
     <div class="dropdown-content" id="mobilegestalt"><span style="font-size:25px;">✅ Mobilegestalt is supported on this iOS/iPadOS version.</span><br><br>
         Run <a href="https://www.icloud.com/shortcuts/2f3b0dc8141f49119b0d5bc039482f6b">this shortcut</a>
         on your device and save the file. Share the file you saved (mobilegestalt.plist) to your pc and open Nugget.<br>
@@ -268,7 +103,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(196, 205, 25
     <div class="dropdown-content" id="mobilegestaltNot"><span style="font-size:25px;">❌ Mobilegestalt is not supported on this iOS/iPadOS version.</span><br><br>Supported versions: <br>iOS/iPadOS versions 16-18.2 Developer Beta 2. (excluding iOS/iPadOS 17.7.6)</div>
     
     <!--POSTERBOARD INFO-->
-    <button class="dropdown" id="pbBtn">Posterboard</button>
+    <button class="dropdown" id="pbBtn"><span class="tag">#</span>Posterboard</button>
     <div class="dropdown-content" id="posterboard"><span style="font-size:25px;">✅ Posterboard is supported on this iOS/iPadOS version.</span><br><br>
         You can get wallpapers from <a href="https://cowabun.ga/wallpapers">here</a>, or <a href="https://discord.gg/xB9Y9rNx3n">this discord server</a>.<br>
         Download the '.tendies' file that you would like, then open Nugget. Navigate to the Posterboard section and<br>
@@ -276,7 +111,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(196, 205, 25
         Go to the Apply tab and click 'Apply'. If you need more help, watch <a href="https://youtu.be/gyxlNpRfcwA">this tutorial</a>.</div>
     <div class="dropdown-content" id="posterboardNot"><span style="font-size:25px;">❌ Posterboard is not supported on this iOS/iPadOS version.</span><br><br>Supported versions: iOS/iPadOS 16+.</div>
     <!--AI INFO-->
-    <button class="dropdown" id="aiBtn">Apple Intelligence</button>
+    <button class="dropdown" id="aiBtn"><span class="tag">#</span>Apple Intelligence</button>
     <div class="dropdown-content" id="appleIntelligence"><span style="font-size:25px;">✅ Apple Intelligence is supported on this iOS/iPadOS version.</span><br><br>
         Go to the Feature Flags tab, and check "Enable Appple Intelligence". Next, go to the Eligibility tab, <br>
         and check "Enable Apple Intelligence". Then check "Spoof device model" (if applicable) and choose<br>
@@ -287,7 +122,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(196, 205, 25
         iOS/iPadOS 18.1.1-18.2 Developer Beta 2.
     </div>
     <!--DI INFO-->
-    <button class="dropdown" id="diBtn">Dynamic Island</button>
+    <button class="dropdown" id="diBtn"><span class="tag">#</span>Dynamic Island</button>
     <div class="dropdown-content" id="dynamicIsland"><span style="font-size:25px;">✅ Dynamic Island is supported on this iOS/iPadOS version.</span><br><br>
         Go to the Mobilegestalt tab. Spoof your device to the latest model with Dynamic Island. <br>
         Here, you can also enable any other Mobilegestalt tweaks. Once done, go to the Apply tab and upload<br>
@@ -423,7 +258,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
   </script>
-  <footer style="text-align: center;"><p>Made by <a href="https://squair.is-a.dev/">Squair</a> (Glixed).</p><p>Join the <a href="https://discord.gg/cowabunga/">Discord server</a>.</p></footer>
-</body>
+    <footer style="text-align: center;"><p>✨Made by <a href="https://squair.is-a.dev/" target="_blank">Squair</a> (Glixed).✨</p><p>Request a feature: <a href="https://discord.com/users/1039340580012036106" target="_blank">Message me on Discord</a>.<br> Join the <a href="https://discord.gg/cowabunga/" target="_blank">Discord server</a>.<br> Visit the <a href="https://github.com/squairdev/nugget-docs" target="_blank">Github Repo</a>.</p></footer>
+  </body>
 </html>
 

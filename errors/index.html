@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--MADE BY Squair. Github: https://github.com/squairdev -->
+<!--wow ascii art
+    .-------------------------------------.
+    |   ______                   _        |
+    |  / _____)                 (_)       |
+    | ( (____   ____ _   _ _____ _  ____  |
+    |  \____ \ / _  | | | (____ | |/ ___) |
+    |  _____) ) |_| | |_| / ___ | | |_    |
+    | (______/ \__  |____/\_____|_|_(_)   |
+    |             |_|                     |
+    '-------------------------------------'
+    -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nugget Helper - Errors</title>
+        <meta content="Nugget Helper - Errors" property="og:title" />
+        <meta content="How to fix Nugget errors." property="og:description" />
+        <meta content="https://squair.is-a.dev/nugget-docs/errors" property="og:url" />
+        <meta content="https://squair.is-a.dev/favicon.png" property="og:image" />
+        <meta content="#1875d2" data-react-helmet="true" name="theme-color" />
+        <link rel="icon" type="image/x-icon" href="https://squair.is-a.dev/favicon.png">
+        <link rel="stylesheet" href="style.css">
+      </head>
+<body class="dark">
+    <h1 id="main-title">Nugget Helper - Errors <br><button style="transform: translateY(7px); cursor: pointer; padding: 6px; width: 100px;" onclick="window.open('../').focus();">Helper</button></h1>
+    
+    <div class="dropdown-section" style="display: block;">
+        <button class="dropdown" id="ConnectionTerminatedError" onclick="DropClick('ConnectionTerminatedError')"><span class="tag">#</span> ConnectionTerminatedError()</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Your device failed to connect.</span><br><br>
+            🪟 Windows: Make sure you have <a href="https://apps.microsoft.com/detail/9np83lwlpz9k">Apple Devices</a> (or <a href="https://support.apple.com/en-us/106372">iTunes</a> if Apple Devices does not work) open, and your device is showing. Go back into Nugget, and refresh the device list.<br>
+            🍎 MacOS: open Finder, and make sure you see your device listed on the side, above Tags. Go back to nugget, and refresh the device list.<br><br>
+            Make sure you are using the port on the back of your pc (if applicable), and you are using a cable that is able to transfer data.</div>
+
+        <button class="dropdown" id="MDM" onclick="DropClick('MDM')"><span class="tag">#</span> "Your device is managed and MDM backup encryption is on..."</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Device management is blocking you.</span><br><br>
+            On your device, go to 'Settings > General > VPN & Device Management', and remove the 'appdb' management profile.<br><br>
+            Note: don't use Nugget on a school/work device. Come on man.</div>
+
+        <button class="dropdown" id="URL" onclick="DropClick('URL')"><span class="tag">#</span> No URL Specified.</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Your iOS/iPadOS version is unsupported.</span><br><br>
+            Only versions of iOS/iPadOS 18.2 Developer Beta 2 and under support mobilegestalt. <a href="../">See Nugget Helper</a>.</div>
+
+        <button class="dropdown" id="exe" onclick="DropClick('exe')"><span class="tag">#</span> Nugget.exe is not opening.</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">You opened it incorrectly.</span><br><br>
+            Type 'win+r' and in the newly opened window, type 'cmd' and press enter. Drag 'Nugget.exe' into command prompt, and press enter.<br>
+            Wait a few seconds before Nugget opens. Don't close command prompt. <a href="../">See Nugget Helper</a>.</div>
+
+        <button class="dropdown" id="deviceList" onclick="DropClick('deviceList')"><span class="tag">#</span> "Failed to get device list..."</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Your device failed to connect.</span><br><br>
+            See <a href="#ConnectionTerminatedError">ConnectionTerminatedError</a>.</div>
+
+        <button class="dropdown" id="MuxExeption" onclick="DropClick('MuxExeption')"><span class="tag">#</span> MuxExeption: MuxExeption("...</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Device access error.</span><br><br>
+            Make sure you have your phone unlocked, and trusted. Windows users: <a href="https://apps.microsoft.com/detail/9pnrbtzxmb4z">download Python</a>.</div>
+
+        <button class="dropdown" id="pass" onclick="DropClick('pass')"><span class="tag">#</span> Device is password protected!</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Device access error (again).</span><br><br>
+            Make sure you have your phone unlocked, and trusted. Windows users: <a href="https://apps.microsoft.com/detail/9pnrbtzxmb4z">download Python</a>.</div>
+    </div>
+        
+
+    <button class="dark-toggle" onclick="document.body.classList.toggle('dark');"><img src="https://squair.is-a.dev/nugget-docs/image/Theme.svg"></button>
+    <script>
+        function DropClick(id){
+            window.location.replace('#'+id);
+        }
+    </script>
+    <footer style="text-align: center;"><p>✨Made by <a href="https://squair.is-a.dev/" target="_blank">Squair</a> (Glixed).✨</p><p>Request a feature: <a href="https://discord.com/users/1039340580012036106" target="_blank">Message me on Discord</a>.<br> Join the <a href="https://discord.gg/cowabunga/" target="_blank">Discord server</a>.<br> Visit the <a href="https://github.com/squairdev/nugget-docs" target="_blank">Github Repo</a>.</p></footer>
+
+</body>
+</html>
