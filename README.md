@@ -14,12 +14,20 @@ Open source, and made by the community.
 - Posterboard availability and install
 - Apple Intelligence availability and install
 - Dynamic Island availability and install
+- Always On Display availability and install
+- Status Bar availability (no install until nugget v6 release)
 - Fix errors
   - Nugget
   - iOS
+- Get answers from the FAQ
+  - iOS, iPadOS
+  - Mobilegestalt
+  - Basic questions
+  - Links
 
 ## Contribute
 Simply make a Pull Request, and I'll review it within 24-48 hrs.
+Or, [message me](https://discord.com/users/1039340580012036106) on Discord.
 ## Links
 - Nugget Helper: https://squair.is-a.dev/nugget-docs/
 

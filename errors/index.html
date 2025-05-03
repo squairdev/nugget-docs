@@ -11,7 +11,7 @@
     |             |_|                     |
     '-------------------------------------'
     -->
-<html lang="en">
+<html lang="en" class="prompt-regular">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,9 +23,17 @@
         <meta content="#1875d2" data-react-helmet="true" name="theme-color" />
         <link rel="icon" type="image/x-icon" href="https://squair.is-a.dev/favicon.png">
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
       </head>
 <body class="dark">
-    <h1 id="main-title">Nugget Helper - Errors <br><button style="transform: translateY(7px); cursor: pointer; padding: 6px; width: 100px;" onclick="window.open('../').focus();">Helper</button></h1>
+    <nav>
+        <div class="help" onclick="window.location.replace('/');"><p><b>Helper</b></p></div>
+        <div class="faq" onclick="window.location.replace('/faq');"><p><b>FAQ</b></p></div>
+        <div class="errors" onclick="window.location.replace('/errors');"><p><b>Errors</b></p></div>
+    </nav>
+    <h1 id="main-title"><br><br>Nugget Helper - Errors</h1>
     
     <div class="dropdown-section" style="display: block;">
         <button class="dropdown" id="ConnectionTerminatedError" onclick="DropClick('ConnectionTerminatedError')"><span class="tag">#</span> ConnectionTerminatedError()</button>
@@ -59,10 +67,14 @@
         <button class="dropdown" id="pass" onclick="DropClick('pass')"><span class="tag">#</span> Device is password protected!</button>
         <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Device access error (again).</span><br><br>
             Make sure you have your phone unlocked, and trusted. Windows users: <a href="https://apps.microsoft.com/detail/9pnrbtzxmb4z">download Python</a>.</div>
+        <button class="dropdown" id="wallpaper" onclick="DropClick('wallpaper')"><span class="tag">#</span> Wallpapers not appearing.</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Applying error.</span><br><br>
+            Open Nugget, and go to the Posterboard tab. Next, click "Clear Collections", and then go to the Apply tab, and apply.<br>
+            If your wallpapers don't show in the "Collections" tab within 1-7 minutes, try applying a different wallpapers.</div>
     </div>
         
 
-    <button class="dark-toggle" onclick="document.body.classList.toggle('dark');"><img src="https://squair.is-a.dev/nugget-docs/image/Theme.svg"></button>
+    <button class="dark-toggle" onclick="document.body.classList.toggle('dark');"><img src="/image/Theme.svg"></button>
     <script>
         function DropClick(id){
             window.location.replace('#'+id);

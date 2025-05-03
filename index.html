@@ -11,7 +11,7 @@
     |             |_|                     |
     '-------------------------------------'
     -->
-<html lang="en">
+<html lang="en" class="prompt-regular">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,10 +23,18 @@
   <meta content="#1875d2" data-react-helmet="true" name="theme-color" />
   <link rel="icon" type="image/x-icon" href="https://squair.is-a.dev/favicon.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
 </head>
 <body class="dark">
+    <nav>
+      <div class="help" onclick="window.location.replace('/');"><p><b>Helper</b></p></div>
+      <div class="faq" onclick="window.location.replace('/faq');"><p><b>FAQ</b></p></div>
+      <div class="errors" onclick="window.location.replace('/errors');"><p><b>Errors</b></p></div>
+    </nav>
     <!--START OF APPLY-->
-    <h1 id="main-title">Nugget Helper<br><button style="transform: translateY(3px); cursor: pointer; padding: 6px; width: 100px;" onclick="window.open('errors/').focus();">Errors</button></h1>
+    <h1 id="main-title"><br><br>Nugget Helper</h1>
     <div class="form-container" id="formBox">
       <div class="form-group">
         <label for="device">iPhone or iPad</label>
@@ -67,7 +75,7 @@
       
 
   <div class="dropdown-section" id="results">
-    <button class="dropdown" id="setupBtn"><span class="tag">#</span>Nugget Setup</button>
+    <button class="dropdown" id="setupBtn"  onclick="DropClick('setupBtn')"><span class="tag">#</span> Nugget Setup</button>
     <div class="dropdown-content" id="setupWin"><span style="font-size: 25px;">🪟 How to setup Nugget on Windows</span><br><br>
         Download and install <a href="https://apps.microsoft.com/detail/9np83lwlpz9k">Apple Devices</a> (If the application is having problems, try <a href="https://support.apple.com/en-us/106372">iTunes</a>).<br>
         After one of the applications have been installed, open it and connect your device (Use a cable that is able to transfer data). <br>
@@ -95,7 +103,7 @@
         "<span style="color: red;">Not Supported.</span>": Either your iOS does not support any nugget tweaks, or your device is too old.<br>
     </div>
     <!--MGS INFO-->
-    <button class="dropdown" id="mgsBtn"><span class="tag">#</span>Mobilegestalt</button>
+    <button class="dropdown" id="mgsBtn"  onclick="DropClick('mgsBtn')"><span class="tag">#</span> Mobilegestalt</button>
     <div class="dropdown-content" id="mobilegestalt"><span style="font-size:25px;">✅ Mobilegestalt is supported on this iOS/iPadOS version.</span><br><br>
         Run <a href="https://www.icloud.com/shortcuts/2f3b0dc8141f49119b0d5bc039482f6b">this shortcut</a>
         on your device and save the file. Share the file you saved (mobilegestalt.plist) to your pc and open Nugget.<br>
@@ -103,7 +111,7 @@
     <div class="dropdown-content" id="mobilegestaltNot"><span style="font-size:25px;">❌ Mobilegestalt is not supported on this iOS/iPadOS version.</span><br><br>Supported versions: <br>iOS/iPadOS versions 16-18.2 Developer Beta 2. (excluding iOS/iPadOS 17.7.6)</div>
     
     <!--POSTERBOARD INFO-->
-    <button class="dropdown" id="pbBtn"><span class="tag">#</span>Posterboard</button>
+    <button class="dropdown" id="pbBtn"  onclick="DropClick('pbBtn')"><span class="tag">#</span> Posterboard</button>
     <div class="dropdown-content" id="posterboard"><span style="font-size:25px;">✅ Posterboard is supported on this iOS/iPadOS version.</span><br><br>
         You can get wallpapers from <a href="https://cowabun.ga/wallpapers">here</a>, or <a href="https://discord.gg/xB9Y9rNx3n">this discord server</a>.<br>
         Download the '.tendies' file that you would like, then open Nugget. Navigate to the Posterboard section and<br>
@@ -111,7 +119,7 @@
         Go to the Apply tab and click 'Apply'. If you need more help, watch <a href="https://youtu.be/gyxlNpRfcwA">this tutorial</a>.</div>
     <div class="dropdown-content" id="posterboardNot"><span style="font-size:25px;">❌ Posterboard is not supported on this iOS/iPadOS version.</span><br><br>Supported versions: iOS/iPadOS 16+.</div>
     <!--AI INFO-->
-    <button class="dropdown" id="aiBtn"><span class="tag">#</span>Apple Intelligence</button>
+    <button class="dropdown" id="aiBtn"  onclick="DropClick('aiBtn')"><span class="tag">#</span> Apple Intelligence</button>
     <div class="dropdown-content" id="appleIntelligence"><span style="font-size:25px;">✅ Apple Intelligence is supported on this iOS/iPadOS version.</span><br><br>
         Go to the Feature Flags tab, and check "Enable Appple Intelligence". Next, go to the Eligibility tab, <br>
         and check "Enable Apple Intelligence". Then check "Spoof device model" (if applicable) and choose<br>
@@ -122,7 +130,7 @@
         iOS/iPadOS 18.1.1-18.2 Developer Beta 2.
     </div>
     <!--DI INFO-->
-    <button class="dropdown" id="diBtn"><span class="tag">#</span>Dynamic Island</button>
+    <button class="dropdown" id="diBtn"  onclick="DropClick('diBtn')"><span class="tag">#</span> Dynamic Island</button>
     <div class="dropdown-content" id="dynamicIsland"><span style="font-size:25px;">✅ Dynamic Island is supported on this iOS/iPadOS version.</span><br><br>
         Go to the Mobilegestalt tab. Spoof your device to the latest model with Dynamic Island. <br>
         Here, you can also enable any other Mobilegestalt tweaks. Once done, go to the Apply tab and upload<br>
@@ -130,6 +138,19 @@
     <div class="dropdown-content" id="dynamicIslandNot"><span style="font-size:25px;">❌ Dynamic Island is not supported on this iOS/iPadOS version.</span><br><br>
         Supported versions:<br>
         iOS/iPadOS 17-18.2 Developer Beta 2.</div>
+
+    <button class="dropdown" id="aodBtn"  onclick="DropClick('aodBtn')"><span class="tag">#</span> Always On Display</button>
+    <div class="dropdown-content" id="AlwaysOnDisplay"><span style="font-size:25px;">✅ Always On Display is supported on this iOS/iPadOS version.</span><br><br>
+        Go to the Mobilegestalt tab. Spoof your device to the latest model with Always On Display. <br>
+        Here, you can also enable any other Mobilegestalt tweaks. Once done, go to the Apply tab and upload<br>
+        your <a href="#mgsBtn">mobilegestalt.plist file</a>, then click Apply.</div>
+    <div class="dropdown-content" id="AlwaysOnDisplayNot"><span style="font-size:25px;">❌ Always On Display is not supported on this iOS/iPadOS version.</span><br><br>
+        Supported versions:<br>
+        iOS/iPadOS 18-18.2 Developer Beta 2.</div>
+
+    <button class="dropdown" id="statusBtn"  onclick="DropClick('statusBtn')"><span class="tag">#</span> Status Bar</button>
+    <div class="dropdown-content" id="AlwaysOnDisplay" style="display: block;"><span style="font-size:25px;">✅ Status Bar is supported on all versions.</span><br><br>
+        No confirmed data on status bar until Nugget v6.</div>
 </div>
   <div style="text-align:center; margin-top: 10px;">
     <button id="toggleFormBtn">Hide Setup Panel</button>
@@ -150,9 +171,12 @@
   </script>
 
 
-  <button class="dark-toggle" onclick="toggleDarkMode()"><img src="https://squair.is-a.dev/nugget-docs/image/Theme.svg"></button>
+  <button class="dark-toggle" onclick="toggleDarkMode()"><img src="image/Theme.svg"></button>
 
   <script>
+    function DropClick(id){
+            window.location.replace('#'+id);
+    }
     function toggleDarkMode() {
       document.body.classList.toggle('dark');
     }
@@ -169,9 +193,13 @@
     function showSections(ios, os) {
       const mgSupported = ['2db', '18.1.1', '18', '17', '16', '16under'];
       const aiSupported = ['2db', '18.1.1'];
-      const diSupported = ['17', '18', '18.1.1', '2db']
+      const diSupported = ['17', '18', '18.1.1', '2db'];
+      const aodSupported = ['18', '18.1.1', '2db'];
       const pbSupported = ['18up', '3db', '2db', '18.1.1', '18', '17.7.6', '17', '16'];
       const iswin = ['windows']
+      if (ios=='16under'){
+        alert("iOS 16 isn't recommended. This version hasn't been thoroughly tested, and may have some bugs. You have been warned.");
+      }
       document.getElementById("mgsBtn").style.display = 'block';
       document.getElementById("pbBtn").style.display = 'block';
       document.getElementById("setupBtn").style.display = 'block';
@@ -196,6 +224,13 @@
         document.getElementById('dynamicIslandNot').style.display = 'block';
         document.getElementById('dynamicIsland').style.display = 'none';
       }
+      if (aodSupported.includes(ios)) {
+        document.getElementById('AlwaysOnDisplay').style.display = 'block';
+        document.getElementById('AlwaysOnDisplayNot').style.display = 'none';
+        } else {
+        document.getElementById('AlwaysOnDisplayNot').style.display = 'block';
+        document.getElementById('AlwaysOnDisplay').style.display = 'none';
+      }
 
       if (pbSupported.includes(ios)) {
         document.getElementById('posterboard').style.display = 'block';
@@ -216,7 +251,6 @@
     function handleSubmit(device, ios, os) {
       const query = `?device=${encodeURIComponent(device)}&ios-version=${encodeURIComponent(ios)}&os=${encodeURIComponent(os)}`;
       history.replaceState(null, '', query);
-
       const formBox = document.getElementById('formBox');
       formBox.style.position = 'absolute';
       formBox.style.top = '20px';
@@ -261,4 +295,3 @@ window.addEventListener('DOMContentLoaded', () => {
     <footer style="text-align: center;"><p>✨Made by <a href="https://squair.is-a.dev/" target="_blank">Squair</a> (Glixed).✨</p><p>Request a feature: <a href="https://discord.com/users/1039340580012036106" target="_blank">Message me on Discord</a>.<br> Join the <a href="https://discord.gg/cowabunga/" target="_blank">Discord server</a>.<br> Visit the <a href="https://github.com/squairdev/nugget-docs" target="_blank">Github Repo</a>.</p></footer>
   </body>
 </html>
-

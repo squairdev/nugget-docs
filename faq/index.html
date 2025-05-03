@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--MADE BY Squair. Github: https://github.com/squairdev -->
+<!--wow ascii art
+    .-------------------------------------.
+    |   ______                   _        |
+    |  / _____)                 (_)       |
+    | ( (____   ____ _   _ _____ _  ____  |
+    |  \____ \ / _  | | | (____ | |/ ___) |
+    |  _____) ) |_| | |_| / ___ | | |_    |
+    | (______/ \__  |____/\_____|_|_(_)   |
+    |             |_|                     |
+    '-------------------------------------'
+    -->
+<html lang="en" class="prompt-regular">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nugget Helper - FAQ</title>
+        <meta content="Nugget Helper - Errors" property="og:title" />
+        <meta content="Frequently Asked Questions about Nugget." property="og:description" />
+        <meta content="https://squair.is-a.dev/nugget-docs/faq" property="og:url" />
+        <meta content="https://squair.is-a.dev/favicon.png" property="og:image" />
+        <meta content="#1875d2" data-react-helmet="true" name="theme-color" />
+        <link rel="icon" type="image/x-icon" href="https://squair.is-a.dev/favicon.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+      </head>
+<body class="dark">
+    <nav>
+        <div class="help" onclick="window.location.replace('/');"><p><b>Helper</b></p></div>
+        <div class="faq" onclick="window.location.replace('/faq');"><p><b>FAQ</b></p></div>
+        <div class="errors" onclick="window.location.replace('/errors');"><p><b>Errors</b></p></div>
+    </nav>
+    <h1 id="main-title"><br><br>Nugget Helper - FAQ</h1>
+    <!--MAIN CONTENT-->
+    <div class="dropdown-section" style="display: block;">
+        <button class="dropdown" id="support" onclick="DropClick('support')"><span class="tag">#</span> Is my device supported on the newest Nugget version?</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Yes.</span><br><br>
+            To find out what features are supported, go to <a href="/">Nugget Helper</a>.<br>
+            Now <u>PLEASE</u> stop asking. It's annoying to respond with the same thing every time.
+        </div>
+
+        <button class="dropdown" id="install" onclick="DropClick('install')"><span class="tag">#</span> How do I install Nugget?</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Go to the <a href="/">Helper</a>.</span><br><br>
+            The <a href="/">Nugget Helper</a> will tell you how to set up Nugget on Windows, or MacOS.
+        </div>
+
+        <button class="dropdown" id="virus" onclick="DropClick('virus')"><span class="tag">#</span> Is Nugget a virus?</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">No.</span><br><br>
+            Nugget is not a virus, as long as you're using the official <a>Nugget</a> github page.<br>
+            Some older versions of nugget may trigger a antivirus screen on Windows, but the Nugget<br>
+            developers and I assure you that this will not harm your computer in any way.
+        </div>
+
+        <button class="dropdown" id="mobilegestalt" onclick="DropClick('mobilegestalt')"><span class="tag">#</span> Is mobilegestalt supported on my iOS version?</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Maybe.</span><br><br>
+            If you're on iOS/iPadOS 18.2 Developer Beta 2 or under, yes.<br><b><u>There will never be support for newer versions above 18.2 Developer Beta 2. Stop asking.</u></b>
+        </div>
+
+        <button class="dropdown" id="wallpapers" onclick="DropClick('wallpapers')"><span class="tag">#</span> Where can I find wallpapers?</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">PosterRestore.</span><br><br>
+            Community made wallpapers (.tendies) can be found in the <a href="https://discord.gg/xB9Y9rNx3n">PosterRestore</a> Discord server, or <a href="https://cowabun.ga/wallpapers">cowabun.ga/wallpapers</a>.
+        </div>
+
+        <button class="dropdown" id="createTendies" onclick="DropClick('createTendies')"><span class="tag">#</span> How do I create a .tendies file (custom wallpaper)?</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Mica editor.</span><br><br>
+            If you're on MacOS, you can use the Mica editor. To get started, join <a href="https://discord.gg/xB9Y9rNx3n">PosterRestore</a> and request <br>
+            support on how to do this (<b>note; it is complicated if you're not good with computers</b>).<br>
+            There currently is no way to do it on Windows, but <a href="https://github.com/openposter/OpenPoster">OpenPoster</a> is in development for Windows and MacOS.
+        </div>
+
+        <button class="dropdown" id="futureSupport" onclick="DropClick('futureSupport')"><span class="tag">#</span> Will 18.2+ have mobilegestalt support in the future?</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px; font-weight: 800;">NO!!!</span><br><br>
+            <b style="font-weight: 600;">PLEASE. I BEG. STOP ASKING THIS QUESTION.</b><br>
+            Versions of iOS/iPadOS 18.2 Developer Beta 3 will <b style="font-weight: 600;">NEVER HAVE SUPPORT.</b>
+        </div>
+
+        <button class="dropdown" id="screenTime" onclick="DropClick('screenTime')"><span class="tag">#</span> I can't click on Screen Time in settings.</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">You disabled it in Daemons.</span><br><br>
+            If you disable ScreenTime Agent in Nugget, you won't be able to click it in settings. To re-enable it, go into nugget > Daemons > Uncheck "Disable ScreenTime Agent".<br>
+            Then, go to apply > Reset Tweaks. Click "Apply".
+        </div>
+
+        <button class="dropdown" id="features" onclick="DropClick('features')"><span class="tag">#</span> What are ALL the Nugget features?</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Visit the Nugget github page.</span><br><br>
+            <a href="https://github.com/leminlimez/Nugget#Features">Go to Nugget</a>.
+        </div>
+    </div>
+    <!--THEME CHANGER AND FOOTER-->
+    <button class="dark-toggle" onclick="document.body.classList.toggle('dark');"><img src="/image/Theme.svg"></button>
+    <script>
+        function DropClick(id){
+            window.location.replace('#'+id);
+        }
+    </script>
+    <footer style="text-align: center;"><p>✨Made by <a href="https://squair.is-a.dev/" target="_blank">Squair</a> (Glixed).✨</p><p>Request a feature: <a href="https://discord.com/users/1039340580012036106" target="_blank">Message me on Discord</a>.<br> Join the <a href="https://discord.gg/cowabunga/" target="_blank">Discord server</a>.<br> Visit the <a href="https://github.com/squairdev/nugget-docs" target="_blank">Github Repo</a>.</p></footer>
+
+</body>
+</html>
