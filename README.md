@@ -24,7 +24,7 @@ Open source, and made by the community.
   - Mobilegestalt
   - Basic questions
   - Links
-
+- Download wallpapers (In development)
 ## Contribute
 Simply make a Pull Request, and I'll review it within 24-48 hrs.
 Or, [message me](https://discord.com/users/1039340580012036106) on Discord.

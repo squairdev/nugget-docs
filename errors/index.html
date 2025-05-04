@@ -29,14 +29,15 @@
       </head>
 <body class="dark">
     <nav>
-        <div class="help" onclick="window.location.replace('/nugget-docs/');"><p><b>Helper</b></p></div>
-        <div class="faq" onclick="window.location.replace('/nugget-docs/faq');"><p><b>FAQ</b></p></div>
-        <div class="errors" onclick="window.location.replace('/nugget-docs/errors');"><p><b>Errors</b></p></div>
+        <div class="help" onclick="window.location.replace('../');"><p><b>Helper</b></p></div>
+        <div class="faq" onclick="window.location.replace('../faq/');"><p><b>FAQ</b></p></div>
+        <div class="errors" onclick="window.location.replace('../errors/');"><p><b>Errors</b></p></div>
+        <div class="wallpapers" onclick="window.location.replace('../wallpapers');"><p><b>Wallpapers</b></p></div>
     </nav>
     <h1 id="main-title"><br><br>Nugget Helper - Errors</h1>
     
     <div class="dropdown-section" style="display: block;">
-        <button class="dropdown" id="ConnectionTerminatedError" onclick="DropClick('ConnectionTerminatedError')"><span class="tag">#</span> ConnectionTerminatedError()</button>
+        <button class="dropdown" id="ConnectionTerminatedError" onclick="DropClick('ConnectionTerminatedError')"><span class="tag">#</span> ConnectionTerminatedError() OR ConnectionAbortedError()</button>
         <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Your device failed to connect.</span><br><br>
             🪟 Windows: Make sure you have <a href="https://apps.microsoft.com/detail/9np83lwlpz9k">Apple Devices</a> (or <a href="https://support.apple.com/en-us/106372">iTunes</a> if Apple Devices does not work) open, and your device is showing. Go back into Nugget, and refresh the device list.<br>
             🍎 MacOS: open Finder, and make sure you see your device listed on the side, above Tags. Go back to nugget, and refresh the device list.<br><br>
@@ -63,18 +64,24 @@
         <button class="dropdown" id="MuxExeption" onclick="DropClick('MuxExeption')"><span class="tag">#</span> MuxExeption: MuxExeption("...</button>
         <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Device access error.</span><br><br>
             Make sure you have your phone unlocked, and trusted. Windows users: <a href="https://apps.microsoft.com/detail/9pnrbtzxmb4z">download Python</a>.</div>
-
-        <button class="dropdown" id="pass" onclick="DropClick('pass')"><span class="tag">#</span> Device is password protected!</button>
+        <button class="dropdown" id="MuxUUID" onclick="DropClick('MuxUUID')"><span class="tag">#</span> MUX ERROR with lockdown device with UUID ...</button>
         <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Device access error (again).</span><br><br>
+            Make sure you have your phone unlocked, and trusted. Windows users: <a href="https://apps.microsoft.com/detail/9pnrbtzxmb4z">download Python</a>.</div>
+        <button class="dropdown" id="pass" onclick="DropClick('pass')"><span class="tag">#</span> Device is password protected!</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Device access error (again x2).</span><br><br>
             Make sure you have your phone unlocked, and trusted. Windows users: <a href="https://apps.microsoft.com/detail/9pnrbtzxmb4z">download Python</a>.</div>
         <button class="dropdown" id="wallpaper" onclick="DropClick('wallpaper')"><span class="tag">#</span> Wallpapers not appearing.</button>
         <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Applying error.</span><br><br>
             Open Nugget, and go to the Posterboard tab. Next, click "Clear Collections", and then go to the Apply tab, and apply.<br>
             If your wallpapers don't show in the "Collections" tab within 1-7 minutes, try applying a different wallpapers.</div>
+        <button class="dropdown" id="directory" onclick="DropClick('directory')"><span class="tag">#</span> FileNotFoundError(2, 'No such file or directory')</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Re-download Nugget from Github.</span><br><br>
+            Go to the <a href="https://github.com/leminlimez/Nugget/releases/latest">latest Nugget release</a>, and re-download it.
+        </div>
     </div>
         
 
-    <button class="dark-toggle" onclick="document.body.classList.toggle('dark');"><img src="/image/Theme.svg"></button>
+    <button class="dark-toggle" onclick="document.body.classList.toggle('dark');"><img src="../image/Theme.svg"></button>
     <script>
         function DropClick(id){
             window.location.replace('#'+id);

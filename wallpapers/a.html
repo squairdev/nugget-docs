@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #121212;
+      font-family: sans-serif;
+    }
+
+    .grid-container {
+      display: grid;
+      gap: 16px;
+      padding: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .box {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      min-height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+
+
+</body>
+</html>

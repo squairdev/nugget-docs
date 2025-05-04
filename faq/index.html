@@ -16,7 +16,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Nugget Helper - FAQ</title>
-        <meta content="Nugget Helper - Errors" property="og:title" />
+        <meta content="Nugget Helper - FAQ" property="og:title" />
         <meta content="Frequently Asked Questions about Nugget." property="og:description" />
         <meta content="https://squair.is-a.dev/nugget-docs/faq" property="og:url" />
         <meta content="https://squair.is-a.dev/favicon.png" property="og:image" />
@@ -29,9 +29,10 @@
       </head>
 <body class="dark">
     <nav>
-        <div class="help" onclick="window.location.replace('/nugget-docs/');"><p><b>Helper</b></p></div>
-        <div class="faq" onclick="window.location.replace('/nugget-docs/faq');"><p><b>FAQ</b></p></div>
-        <div class="errors" onclick="window.location.replace('/nugget-docs/errors');"><p><b>Errors</b></p></div>
+        <div class="help" onclick="window.location.replace('../');"><p><b>Helper</b></p></div>
+        <div class="faq" onclick="window.location.replace('../faq');"><p><b>FAQ</b></p></div>
+        <div class="errors" onclick="window.location.replace('../errors');"><p><b>Errors</b></p></div>
+        <div class="wallpapers" onclick="window.location.replace('../wallpapers');"><p><b>Wallpapers</b></p></div>
     </nav>
     <h1 id="main-title"><br><br>Nugget Helper - FAQ</h1>
     <!--MAIN CONTENT-->
@@ -74,7 +75,7 @@
         <button class="dropdown" id="futureSupport" onclick="DropClick('futureSupport')"><span class="tag">#</span> Will 18.2+ have mobilegestalt support in the future?</button>
         <div class="dropdown-content" style="display: block;"><span style="font-size:25px; font-weight: 800;">NO!!!</span><br><br>
             <b style="font-weight: 600;">PLEASE. I BEG. STOP ASKING THIS QUESTION.</b><br>
-            Versions of iOS/iPadOS 18.2 Developer Beta 3 will <b style="font-weight: 600;">NEVER HAVE SUPPORT.</b>
+            Versions of iOS/iPadOS 18.2 Developer Beta 3 and up will <b style="font-weight: 600;">NEVER HAVE SUPPORT.</b>
         </div>
 
         <button class="dropdown" id="screenTime" onclick="DropClick('screenTime')"><span class="tag">#</span> I can't click on Screen Time in settings.</button>
@@ -87,9 +88,30 @@
         <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Visit the Nugget github page.</span><br><br>
             <a href="https://github.com/leminlimez/Nugget#Features">Go to Nugget</a>.
         </div>
+
+        <button class="dropdown" id="duplicate" onclick="DropClick('duplicate')"><span class="tag">#</span> My wallpapers are duplicating. <span style="font-size: 13px; text-align: right;"><a href="https://discord.com/channels/1088206123972186143/1088206126467784826/1368252291269791774" style="color: #84bfff;"> (requested by @obsequiousnesses)</a></span></button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Clear Collections.</span><br><br>
+            Go to Nugget > Posterboard > Clear Collections. Add your wallpapers, and apply. <br>
+            If this still does not work, try changing your device language (example; English (Canada) > English (UK))<br>
+            and then change it back to the original language.
+        </div>
+
+        <button class="dropdown" id="collections" onclick="DropClick('collections')"><span class="tag">#</span> My Collections section is gone.</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Clear Collections (again).</span><br><br>
+            Go to Nugget > Posterboard > Clear Collections.<br>
+            If this still does not work, try changing your device language (example; English (Canada) > English (UK))<br>
+            and then change it back to the original language.
+        </div>
+
+        <button class="dropdown" id="partiallySupported" onclick="DropClick('partiallySupported')"><span class="tag">#</span> Nugget says "Partially supported.".</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">You cannot have mobilegestalt tweaks.</span><br><br>
+            You cannot enable mobilegestalt tweaks like Apple Intelligence, Always on Display, or Dynamic Island.<br>
+            Though, you can still enable tweaks like Posterboard, Daemons, and Springboard options.<br>
+            For more info, go to the <a href="../">Nugget Helper</a>.
+        </div>
     </div>
     <!--THEME CHANGER AND FOOTER-->
-    <button class="dark-toggle" onclick="document.body.classList.toggle('dark');"><img src="/image/Theme.svg"></button>
+    <button class="dark-toggle" onclick="document.body.classList.toggle('dark');"><img src="../image/Theme.svg"></button>
     <script>
         function DropClick(id){
             window.location.replace('#'+id);
