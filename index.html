@@ -23,9 +23,6 @@
   <meta content="#1875d2" data-react-helmet="true" name="theme-color" />
   <link rel="icon" type="image/x-icon" href="https://squair.is-a.dev/favicon.png">
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
 </head>
 <body class="dark">
     <nav>
@@ -76,7 +73,7 @@
       
 
   <div class="dropdown-section" id="results">
-    <button class="dropdown" id="setupBtn"  onclick="DropClick('setupBtn')"><span class="tag">#</span> Nugget Setup</button>
+    <button class="dropdown" id="setupBtn"  onclick="window.location.replace('#setupBtn');"><span class="tag">#</span> Nugget Setup</button>
     <div class="dropdown-content" id="setupWin"><span style="font-size: 25px;">🪟 How to setup Nugget on Windows</span><br><br>
         Download and install <a href="https://apps.microsoft.com/detail/9np83lwlpz9k">Apple Devices</a> (If the application is having problems, try <a href="https://support.apple.com/en-us/106372">iTunes</a>).<br>
         After one of the applications have been installed, open it and connect your device (Use a cable that is able to transfer data). <br>
@@ -172,7 +169,6 @@
   </script>
 
 
-  <button class="dark-toggle" onclick="toggleDarkMode()"><img src="image/Theme.svg"></button>
 
   <script>
     function DropClick(id){

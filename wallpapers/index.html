@@ -17,16 +17,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Nugget Helper - Wallpapers</title>
         <meta content="Nugget Helper - Wallpapers" property="og:title" />
-        <meta content="Most community made Nugget wallpapers." property="og:description" />
+        <meta content="Community made Nugget wallpapers." property="og:description" />
         <meta content="https://squair.is-a.dev/nugget-docs/wallpapers" property="og:url" />
         <meta content="https://squair.is-a.dev/favicon.png" property="og:image" />
         <meta content="#1875d2" data-react-helmet="true" name="theme-color" />
         <link rel="icon" type="image/x-icon" href="https://squair.is-a.dev/favicon.png">
         <link rel="stylesheet" href="../wallpapers/style.css">
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
       </head>
 <body class="dark">
     <nav>
@@ -37,6 +33,9 @@
     </nav>
     <h1 id="main-title"><br><br>Nugget Helper - Wallpapers</h1>
     <!--MAIN CONTENT-->
+    <div style="text-align:center; margin: 30px 0;">
+        <input type="text" id="searchInput" placeholder="Search wallpapers..." style="padding: 10px; width: 80%; max-width: 400px; border-radius: 10px; font-size: 16px;">
+    </div>
     <div class="flex-grid-thirds">
         <div class="col" id="wii">
             <h2>Wii Homebrew channel</h2>
@@ -450,17 +449,79 @@
             <p>Created by @TY and Co.</p>
             <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/TOTKSkyandDepths.tendies', '_blank');">Download</button>
         </div>
+
+        <div class="col" id="modernios7">
+            <h2>Modern iOS 7</h2>
+            <img src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/iOS7Modern.gif"/>
+            <p>Created by @thing_on_a_string</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/Modern_iOS_7.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="appleAnimationLucid">
+            <h2>Lucid Apple Animation</h2>
+            <img src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/AppleLogo2.gif"/>
+            <p>Created by @thing_on_a_string</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/AppleAnim2.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="invincible">
+            <h2>Invincible (iPhone)</h2>
+            <img src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/invi.gif"/>
+            <p>Created by @vexirale</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/invinsihblih.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="appleAnimationShapes">
+            <h2>Shapes Apple Animation</h2>
+            <img src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/animatedApple.gif"/>
+            <p>Created by @kylekennedykk</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/AnimatedAppleLogoV2.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="spinningChip">
+            <h2>Spinning Chip</h2>
+            <img src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/chipspin.gif"/>
+            <p>Created by @stpotato</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/Chip.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="appleIntelligence">
+            <h2>AI Gradient</h2>
+            <img src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/ScreenRecording_03-31-2025_17-37-49_1.gif"/>
+            <p>Created by @pengubow</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/AIGradient.tendies', '_blank');">Download</button>
+        </div>
       </div>
 
 
+    <!--SEARCH SCRIPT-->
+    <script>
+        const searchInput = document.getElementById('searchInput');
+    
+        searchInput.addEventListener('input', function () {
+            const filter = searchInput.value.toLowerCase();
+            const wallpapers = document.querySelectorAll('.flex-grid-thirds .col');
+    
+            wallpapers.forEach(wallpaper => {
+                const title = wallpaper.querySelector('h2')?.innerText.toLowerCase() || '';
+                const creator = wallpaper.querySelector('p')?.innerText.toLowerCase() || '';
+                if (title.includes(filter) || creator.includes(filter)) {
+                    wallpaper.style.display = '';
+                } else {
+                    wallpaper.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
     <!--THEME CHANGER AND FOOTER-->
-    <button class="dark-toggle" onclick="document.body.classList.toggle('dark');"><img src="../image/Theme.svg"></button>
     <script>
         function DropClick(id){
             window.location.replace('#'+id);
         }
     </script>
-    <footer style="text-align: center;"><p>✨Made by <a href="https://squair.is-a.dev/" target="_blank">Squair</a> (Glixed).✨</p><p>Request a feature: <a href="https://discord.com/users/1039340580012036106" target="_blank">Message me on Discord</a>.<br> Join the <a href="https://discord.gg/cowabunga/" target="_blank">Discord server</a>.<br> Visit the <a href="https://github.com/squairdev/nugget-docs" target="_blank">Github Repo</a>.</p></footer>
+    
+    <footer style="text-align: center;"><p>✨Made by <a href="https://squair.is-a.dev/" target="_blank">Squair</a> (Glixed).✨</p><p>Add a wallpaper: <a href="https://discord.com/users/1039340580012036106" target="_blank">Message me on Discord</a>.<br> Join the <a href="https://discord.gg/cowabunga/" target="_blank">Discord server</a>.<br> Visit the <a href="https://github.com/squairdev/nugget-docs" target="_blank">Github Repo</a>.</p></footer>
 
 </body>
 </html>

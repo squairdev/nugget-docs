@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     transition: background-color 0.3s, color 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   body {
@@ -17,7 +18,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(196, 205, 25
 
   body.dark {
     background: #020024;
-    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(1, 9, 82, 1) 100%);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(0, 7, 66) 100%);
     color: #f0f0f0;
   }
 
@@ -177,7 +178,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(196, 205, 25
     margin-top: 0;
     height: 75px;
     padding: 15px;
-    border: 2px solid #007bff;
+    border: solid 3px #272727;
     border-radius: 20px;
     background: #f9f9f9;
     overflow: hidden;
@@ -213,10 +214,3 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(196, 205, 25
   body.dark nav > div > p {
     color: white;
   }
-  
-  .prompt-regular {
-    font-family: "Prompt", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-  }
-  

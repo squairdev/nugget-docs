@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     transition: background-color 0.3s, color 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   body {
@@ -17,7 +18,7 @@
 
   body.dark {
     background: #020024;
-    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(1, 9, 82, 1) 100%);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(0, 7, 66) 100%);
     color: #f0f0f0;
   }
 
@@ -79,8 +80,9 @@
     font-weight: bold;
     border: none;
     border-radius: 12px;
-    cursor:default;
+    cursor:pointer;
     transition: background-color 0.3s ease;
+
   }
 
   .dark-toggle {
@@ -177,7 +179,7 @@ nav {
     margin-top: 0;
     height: 75px;
     padding: 15px;
-    border: 2px solid #007bff;
+    border: solid 3px #272727;
     border-radius: 20px;
     background: #f9f9f9;
     overflow: hidden;
@@ -213,13 +215,6 @@ nav {
     body.dark nav > div > p {
     color: white;
     }
-    
-    .prompt-regular {
-    font-family: "Prompt", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    }
-
     .flex-grid-thirds {
         display: flex;
         flex-wrap: wrap;
@@ -234,7 +229,7 @@ nav {
         height: 870px;
         padding: 20px;
         background: #f9f9f9;
-        border:#007bff 3px solid;
+        border: solid 3px #272727;
         border-radius: 12px;
         color: black;
         text-align: center;
@@ -251,4 +246,10 @@ nav {
         width: 315px;
         height: 640px;
         object-fit: cover;
+      }
+      #searchInput{
+        background-color: #007bff;
+        border: #003e81 3px solid;
+      }#searchInput::placeholder{
+        color:#dfdfdf;
       }
