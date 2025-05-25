@@ -17,7 +17,6 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(196, 205, 25
   }
 
   body.dark {
-    background: #020024;
     background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(17, 0, 10) 100%);
     color: #f0f0f0;
   }
@@ -177,7 +176,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(196, 205, 25
   }
   
   nav > div {
-    flex: 1; /* each item takes equal space */
+    flex: 1; 
     height: 100%;
     margin: 0 5px;
     font-size: 25px;

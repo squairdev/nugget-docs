@@ -19,9 +19,9 @@
   <meta content="Nugget Helper" property="og:title" />
   <meta content="How to setup and use Nugget." property="og:description" />
   <meta content="https://squair.is-a.dev/nugget-docs" property="og:url" />
-  <meta content="https://squair.is-a.dev/favicon.png" property="og:image" />
-  <meta content="#1875d2" data-react-helmet="true" name="theme-color" />
-  <link rel="icon" type="image/x-icon" href="https://squair.is-a.dev/favicon.png">
+  <meta content="image/NuggetHelperLogo.png" property="og:image" />
+  <meta content="#11000a" data-react-helmet="true" name="theme-color" />
+  <link rel="icon" type="image/x-icon" href="image/NuggetHelperCircle.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark">
@@ -148,7 +148,7 @@
 
     <button class="dropdown" id="statusBtn"  onclick="DropClick('statusBtn')"><span class="tag">#</span> Status Bar</button>
     <div class="dropdown-content" id="AlwaysOnDisplay" style="display: block;"><span style="font-size:25px;">✅ Status Bar is supported on all versions.</span><br><br>
-        No confirmed data on status bar until Nugget v6.</div>
+        Not much to say here... It's supported.</div>
 </div>
   <div style="text-align:center; margin-top: 10px;">
     <button id="toggleFormBtn">Hide Setup Panel</button>
@@ -195,7 +195,10 @@
       const pbSupported = ['18up', '3db', '2db', '18.1.1', '18', '17.7.6', '17', '16'];
       const iswin = ['windows']
       if (ios=='16under'){
-        alert("iOS 16 isn't recommended. This version hasn't been thoroughly tested, and may have some bugs. You have been warned.");
+        alert("iOS 16- isn't recommended. This version hasn't been thoroughly tested, and may have some bugs. You have been warned.");
+      }
+      if (ios=='16'){
+        alert("iOS 16 isn't recommended. These versions hasn't been thoroughly tested, and may have some bugs. You have been warned.");
       }
       document.getElementById("mgsBtn").style.display = 'block';
       document.getElementById("pbBtn").style.display = 'block';
