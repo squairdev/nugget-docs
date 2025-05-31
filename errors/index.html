@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--MADE BY Squair. Github: https://github.com/squairdev -->
+<!--wow ascii art
+    .-------------------------------------.
+    |   ______                   _        |
+    |  / _____)                 (_)       |
+    | ( (____   ____ _   _ _____ _  ____  |
+    |  \____ \ / _  | | | (____ | |/ ___) |
+    |  _____) ) |_| | |_| / ___ | | |_    |
+    | (______/ \__  |____/\_____|_|_(_)   |
+    |             |_|                     |
+    '-------------------------------------'
+    -->
+<html lang="en" class="prompt-regular">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nugget Helper | Errors</title>
+        <meta content="Nugget Helper | Errors" property="og:title" />
+        <meta content="How to fix Nugget errors." property="og:description" />
+        <meta content="https://squair.is-a.dev/nugget-docs/errors" property="og:url" />
+        <meta content="https://github.com/squairdev/nugget-docs/blob/main/image/NuggetHelperLogo.png?raw=true" property="og:image" />
+        <meta content="#11000a" data-react-helmet="true" name="theme-color" />
+        <link rel="icon" type="image/x-icon" href="https://github.com/squairdev/nugget-docs/blob/main/image/NuggetHelperCircle.png?raw=true">
+        <link rel="stylesheet" href="style.css">
+      </head>
+<body class="dark">
+    <nav>
+        <div class="help" onclick="window.location.replace('../');"><p><b>Helper</b></p></div>
+        <div class="faq" onclick="window.location.replace('../faq/');"><p><b>FAQ</b></p></div>
+        <div class="errors" onclick="window.location.replace('../errors/');"><p><b>Errors</b></p></div>
+        <div class="wallpapers" onclick="window.location.replace('../wallpapers');"><p><b>Wallpapers</b></p></div>
+    </nav>
+    <h1 id="main-title"><br><br>Nugget Helper | Errors</h1>
+    
+    <div class="dropdown-section" style="display: block;">
+        <button class="dropdown" id="ConnectionTerminatedError" onclick="DropClick('ConnectionTerminatedError')"><span class="tag">#</span> ConnectionTerminatedError() OR ConnectionAbortedError()</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Your device failed to connect.</span><br><br>
+            🪟 Windows: Make sure you have <a style="text-shadow: 0 0 10px #1d8aff;" href="https://apps.microsoft.com/detail/9np83lwlpz9k">Apple Devices</a> (or <a style="text-shadow: 0 0 10px #1d8aff;" href="https://support.apple.com/en-us/106372">iTunes</a> if Apple Devices does not work) open, and your device is showing. Go back into Nugget, and refresh the device list.<br>
+            🍎 MacOS: open Finder, and make sure you see your device listed on the side, above Tags. Go back to nugget, and refresh the device list.<br><br>
+            Make sure you are using the port on the back of your pc (if applicable), and you are using a cable that is able to transfer data.</div>
+
+        <button class="dropdown" id="MDM" onclick="DropClick('MDM')"><span class="tag">#</span> "Your device is managed and MDM backup encryption is on..."</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Device management is blocking you.</span><br><br>
+            On your device, go to 'Settings > General > VPN & Device Management', and remove the 'appdb' management profile.<br><br>
+            Note: don't use Nugget on a school/work device. Come on man.</div>
+
+        <button class="dropdown" id="URL" onclick="DropClick('URL')"><span class="tag">#</span> No URL Specified.</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Your iOS/iPadOS version is unsupported.</span><br><br>
+            Only versions of iOS/iPadOS 18.2 Developer Beta 2 and under support mobilegestalt. <a style="text-shadow: 0 0 10px #1d8aff;" href="../">See Nugget Helper</a>.</div>
+
+        <button class="dropdown" id="exe" onclick="DropClick('exe')"><span class="tag">#</span> Nugget.exe is not opening.</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">You opened it incorrectly.</span><br><br>
+            Type 'win+r' and in the newly opened window, type 'cmd' and press enter. Drag 'Nugget.exe' into command prompt, and press enter.<br>
+            Wait a few seconds before Nugget opens. Don't close command prompt. <a style="text-shadow: 0 0 10px #1d8aff;" href="../">See Nugget Helper</a>.</div>
+
+        <button class="dropdown" id="deviceList" onclick="DropClick('deviceList')"><span class="tag">#</span> "Failed to get device list..."</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Your device failed to connect.</span><br><br>
+            See <a style="text-shadow: 0 0 10px #1d8aff;" href="#ConnectionTerminatedError">ConnectionTerminatedError</a>.</div>
+
+        <button class="dropdown" id="MuxExeption" onclick="DropClick('MuxExeption')"><span class="tag">#</span> MuxExeption: MuxExeption("...</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Device access error.</span><br><br>
+            Make sure you have your phone unlocked, and trusted. Windows users: <a style="text-shadow: 0 0 10px #1d8aff;" href="https://apps.microsoft.com/detail/9pnrbtzxmb4z">download Python</a>.</div>
+        <button class="dropdown" id="MuxUUID" onclick="DropClick('MuxUUID')"><span class="tag">#</span> MUX ERROR with lockdown device with UUID ...</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Device access error (again).</span><br><br>
+            Make sure you have your phone unlocked, and trusted. Windows users: <a style="text-shadow: 0 0 10px #1d8aff;" href="https://apps.microsoft.com/detail/9pnrbtzxmb4z">download Python</a>.</div>
+        <button class="dropdown" id="pass" onclick="DropClick('pass')"><span class="tag">#</span> Device is password protected!</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Device access error (again x2).</span><br><br>
+            Make sure you have your phone unlocked, and trusted. Windows users: <a style="text-shadow: 0 0 10px #1d8aff;" href="https://apps.microsoft.com/detail/9pnrbtzxmb4z">download Python</a>.</div>
+        <button class="dropdown" id="wallpaper" onclick="DropClick('wallpaper')"><span class="tag">#</span> Wallpapers not appearing.</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Applying error.</span><br><br>
+            Open Nugget, and go to the Posterboard tab. Next, click "Clear Collections", and then go to the Apply tab, and apply.<br>
+            If your wallpapers don't show in the "Collections" tab within 1-7 minutes, try applying a different wallpapers.</div>
+        <button class="dropdown" id="directory" onclick="DropClick('directory')"><span class="tag">#</span> FileNotFoundError(2, 'No such file or directory')</button>
+        <div class="dropdown-content" style="display: block;"><span style="font-size:25px;">Re-download Nugget from Github.</span><br><br>
+            Go to the <a style="text-shadow: 0 0 10px #1d8aff;" href="https://github.com/leminlimez/Nugget/releases/latest">latest Nugget release</a>, and re-download it.
+        </div>
+    </div>
+        
+
+    <script>
+        function DropClick(id){
+            window.location.replace('#'+id);
+        }
+    </script>
+  <script>
+  let lastScrollY = window.scrollY;
+  const nav = document.querySelector('nav');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY && window.scrollY > 100) {
+      nav.style.top = '-80px'; // Hide
+    } else {
+      nav.style.top = '1%'; // Show
+    }
+    lastScrollY = window.scrollY;
+  });
+  </script>
+    <footer style="text-align: center;"><p>✨Made by <a style="text-shadow: 0 0 10px #1d8aff;" href="https://squair.is-a.dev/" target="_blank">Squair</a> (Glixed).✨</p><p>Request a feature: <a style="text-shadow: 0 0 10px #1d8aff;" href="https://discord.com/users/1039340580012036106" target="_blank">Message me on Discord</a>.<br> Join the <a style="text-shadow: 0 0 10px #1d8aff;" href="https://discord.gg/cowabunga/" target="_blank">Discord server</a>.<br> Visit the <a style="text-shadow: 0 0 10px #1d8aff;" href="https://github.com/squairdev/nugget-docs" target="_blank">Github Repo</a>.</p></footer>
+
+</body>
+</html>

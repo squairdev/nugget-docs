@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<!--MADE BY Squair. Github: https://github.com/squairdev -->
+<!--wow ascii art
+    .-------------------------------------.
+    |   ______                   _        |
+    |  / _____)                 (_)       |
+    | ( (____   ____ _   _ _____ _  ____  |
+    |  \____ \ / _  | | | (____ | |/ ___) |
+    |  _____) ) |_| | |_| / ___ | | |_    |
+    | (______/ \__  |____/\_____|_|_(_)   |
+    |             |_|                     |
+    '-------------------------------------'
+    -->
+<html lang="en" class="prompt-regular">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nugget Helper | Wallpapers</title>
+        <meta content="Nugget Helper | Wallpapers" property="og:title" />
+        <meta content="Community made Nugget wallpapers." property="og:description" />
+        <meta content="https://squair.is-a.dev/nugget-docs/wallpapers" property="og:url" />
+        <meta content="https://github.com/squairdev/nugget-docs/blob/main/image/NuggetHelperLogo.png?raw=true" property="og:image" />
+        <meta content="#11000a" data-react-helmet="true" name="theme-color" />
+        <link rel="icon" type="image/x-icon" href="https://github.com/squairdev/nugget-docs/blob/main/image/NuggetHelperCircle.png?raw=true">
+        <link rel="stylesheet" href="../wallpapers/style.css">
+      </head>
+<body class="dark">
+    <nav>
+        <div class="help" onclick="window.location.replace('../');"><p><b>Helper</b></p></div>
+        <div class="faq" onclick="window.location.replace('../faq');"><p><b>FAQ</b></p></div>
+        <div class="errors" onclick="window.location.replace('../errors');"><p><b>Errors</b></p></div>
+        <div class="wallpapers" onclick="window.location.replace('../wallpapers');"><p><b>Wallpapers</b></p></div>
+    </nav>
+    <h1 id="main-title"><br><br>Nugget Helper | Wallpapers</h1>
+    <!--MAIN CONTENT-->
+    <div style="text-align:center; margin: 30px 0;">
+        <input type="text" id="searchInput" placeholder="Search wallpapers..." style="padding: 10px; width: 100%; max-width: 400px; border-radius: 10px; font-size: 16px; text-align: center; color: white">
+        <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@user </span><span>- Has popular wallpapers</span><br>
+        <span style="color:#007bff; text-shadow: 0 0 10px #1d8aff;">@user </span><span>- Has link to portfolio</span>
+    </div>
+    <div class="flex-grid-thirds">
+        <div class="col" id="wii">
+            <h2>Wii Homebrew channel</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/HomebrewChannel.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@dootskyre</span></p>
+            <button onclick="window.open('https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/wallpapers/custom/HomebrewChannel.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="space">
+            <h2>Space</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/Space.gif"/>
+            <p>Created by @_systemless</p>
+            <button onclick="window.open('https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/wallpapers/custom/Space.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="ios6">
+            <h2>iOS 6 Revamp</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/iOS6Revamp.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@dularkian</span></p>
+            <button onclick="window.open('https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/wallpapers/custom/iOS6Revamp.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="minecraft">
+            <h2>Minecraft Panoroma</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/MCPanorama.gif" id="mc"/>
+            <p>Created by @pengubow</p>
+            <button onclick="window.open('https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/wallpapers/custom/MCPanorama.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="sakura">
+            <h2>Sakura Tree</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/Sakura.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@jam_minty</span></p>
+            <button onclick="window.open('https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/wallpapers/custom/Sakura.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="splatoon">
+            <h2>Splatoon</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/Splatoon.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@dularkian</span></p>
+            <button onclick="window.open('https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/wallpapers/custom/Splatoon-SquidSisters.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="mario">
+            <h2>Mario Galaxy</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/galaxy.gif" id="mc"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@dootskyre</span></p>
+            <button onclick="window.open('https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/wallpapers/custom/MarioGalaxy.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="yoshi">
+            <h2>Mario Yoshi</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/MarioYoshi.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@jordrixx</span></p>
+            <button onclick="window.open('https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/wallpapers/custom/MarioYoshi.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="tintedcubes">
+            <h2>Tinted Cubes</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/cubes.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@dootskyre</span></p>
+            <button onclick="window.open('https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/wallpapers/custom/TintedCubes.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="sprinkles">
+            <h2>Rainbow Sprinkles</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/sprinkles.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@dootskyre</span></p>
+            <button onclick="window.open('https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/wallpapers/custom/RainbowSprinkles.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="balatro">
+            <h2>Balatro</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/balatro.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@dularkian</span></p>
+            <button onclick="window.open('https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/wallpapers/custom/BalatroMenu.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="boykisser">
+            <h2>Boykisser :3</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/boykisser.gif"/>
+            <p>Created by @ch_eese</p>
+            <button onclick="window.open('https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/wallpapers/custom/boykisser.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="backup">
+            <h2>iOS Backup</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/iOSBackupThings.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@dularkian</span></p>
+            <button onclick="window.open('https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/wallpapers/custom/iOSBackupThings.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="snoopy">
+            <h2>Snoopy</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/Snoopy.gif"/>
+            <p>Created by @daredvl</p>
+            <button onclick="window.open('https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/wallpapers/custom/Snoopy.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="aqua">
+            <h2>Aqua Collection</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/AquaCollection.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@dularkian</span></p>
+            <button onclick="window.open('https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/wallpapers/custom/AquaCollection.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="iphone15">
+            <h2>iPhone 15 (iOS 18+)</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/images/iPhone15SeaGlass.png" id="mc"/>
+            <p>Created by @applintrnl</p>
+            <button onclick="window.open('https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/wallpapers/custom/iPhone15SeaGlass.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="gear">
+            <h2>Spinning Gear</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/SpinningGear.gif"/>
+            <p>Created by @applintrnl</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/SpinningGear.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="iphone15pro">
+            <h2>iPhone 15 Pro</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/images/iPhone15ProColorCollection.png" id="mc"/>
+            <p>Created by @applintrnl</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/iPhone15ProColorCollection.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="rickroll">
+            <h2 style="font-size: 20px;">RickApple (suggested photos)</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/images/RickApple.png"/>
+            <p>Created by @forcequitOS</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/RickApple.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="appleLogo">
+            <h2>Apple Logo</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/AppleLogo.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@jam_minty</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/AppleLogo.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="isoda">
+            <h2>iSoda</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/iSoda.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@jam_minty</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/iSoda.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="nexus">
+            <h2>Nexus</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/Nexus.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@bebebole</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/Nexus.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="midnightBrisa">
+            <h2>Midnight Brisa</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/MidnightBrisa.gif"/>
+            <p>Created by @limonetexd</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/MidnightBrisa.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="stars">
+            <h2>Stars</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/Stars.gif"/>
+            <p>Created by @kukuruzka165</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/Stars.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="swelvy">
+            <h2>Swelvy</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/Swelvy.gif"/>
+            <p>Created by @anhnguyenlost13</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/Swelvy.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="graduation">
+            <h2>Graduation</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/Graduation.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@ROWNIE & @Mars</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/Graduation.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="patrickSeahorse">
+            <h2>Patrick on a Seahorse</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/PatrickSeahorse.gif" id="mc"/>
+            <p>Created by @ellibarks</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/PatrickSeahorse.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="nintendoSwitch">
+            <h2>Nintendo Switch</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/NintendoSwitch.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@c4ndyf1sh</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/NintendoSwitch.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="animalCrossing">
+            <h2>Animal Crossing</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/ScreenRecording_04-01-2025_07-20-52_1.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@dootskyre</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/AnimalCrossingSeasons.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="flowerBoy">
+            <h2>Flower Boy</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/screenrecording_04-05-2025_19-04-25_1.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@softminted_</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/flower_boy_v1.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="purpleWave">
+            <h2>Purple Wave</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/screenrecording_03-27-2025_21-04-19_1.gif"/>
+            <p>Created by @cgbakery</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/wave.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="blackGoku">
+            <h2>Black Goku</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/BlackGoku.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@yangjiii</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/BlackGoku.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="brokenScreen">
+            <h2>Broken Screen</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/BrokenScreen.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@jam_minty</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/BrokenScreen.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="desert">
+            <h2>Desert</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/Desert.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@yangjiii</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/Desert.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="fatCat">
+            <h2>Fat Cat</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/FatCat.gif"/>
+            <p>Created by @thefelix32</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/FatCat.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="dragonball">
+            <h2>Dragonball</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/Dragonball.gif"/>
+            <p>Created by @thefelix324</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/Dragonball.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="honorMagic">
+            <h2>Honor Magic Flip</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/HonorMagicVFlip.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@yangjiii</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/HonorMagicVFlip.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="persona3bright">
+            <h2>Persona 3</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/Persona3.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@bebebole</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/P3ClassicTheme.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="skeleton">
+            <h2>Skeleton</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/Skelet.gif"/>
+            <p>Created by @rezanen</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/Skelet.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="stonksUp">
+            <h2>Stonks Up</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/StonksUp.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@jam_minty</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/StonksUp.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="stonksDown">
+            <h2>Stonks Down</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/StonksDown.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@jam_minty</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/StonksDown.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="blackHole">
+            <h2>Black Hole</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/BlackHole.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@i.mes</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/BlackHole.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="catVolleyball">
+            <h2>Cat Volleyball</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/catvolleyball-lite.gif" id="mc"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@c4ndyf1sh</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/catvolleyball-lite.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="iamin">
+            <h2>I am in.</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/i_am_in.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@i.mes</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/i_am_in.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="neonLines">
+            <h2>Neon Lines</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/neon_lines.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@i.mes</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/neon_lines.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="orbital">
+            <h2>Orbital</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/orbitalv1.gif"/>
+            <p>Created by @luctilus</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/orbitalv1.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="ubuntu">
+            <h2>Ubuntu</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/ubuntu.gif"/>
+            <p>Created by @mak5er</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/ubuntu.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="wiiBoot">
+            <h2>Wii Boot Screen</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/wiiFIX.gif"/>
+            <p>Created by @cgbakery</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/wiiFIX.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="windows11">
+            <h2>Windows 11</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/windows11.gif"/>
+            <p>Created by @mak5er</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/windows11.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="sonicMania">
+            <h2>Sonic Mania</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/ScreenRecording_03-31-2025_22-03-31_1.gif"/>
+            <p>Created by @semay</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/smania.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="persona5">
+            <h2>Persona 5</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/ScreenRecording_04-18-2025_21-26-34_1.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@TY and Co.</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/P5Theme.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="UziVsWorld">
+            <h2>Lil Uzi Vert vs. World</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/preview.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@dularkian</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/Lil_Uzi_Vert_Vs._The_World.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="persona4">
+            <h2>Persona 4</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/ScreenRecording_04-19-2025_20-08-21_1.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@TY and Co.</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/P4Theme.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="persona3">
+            <h2>Persona 3</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/ScreenRecording_04-24-2025_06-01-37_1.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@TY and Co.</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/P3ClassicTheme.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="undertaleRuins">
+            <h2>Undertale Ruins</h2>
+            <img loading="lazy" src="https://raw.githubusercontent.com/SerStars/nugget-wallpapers/refs/heads/main/previews/custom/gifs/ScreenRecording_04-17-2025_18-55-26_1.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@TY and Co.</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/UndertaleRuins.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="kanyeWest">
+            <h2>Kanye West</h2>
+            <img loading="lazy" src="https://posters.retron.dev/images/kanyewest.gif"/>
+            <p>Created by @retronbv</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/kanyewest.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="lofiGirl">
+            <h2>Lofi Girl</h2>
+            <img loading="lazy" src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/ScreenRecording_04-28-2025_21-17-30_1.gif"/>
+            <p>Created by @mightycooldude12</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/mightycooldude12.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="harmonyOS">
+            <h2>HarmonyOS</h2>
+            <img loading="lazy" src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/Harmony.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@yangjiii</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/HarmonyOSEmoji.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="totk">
+            <h2>TOTK Sky and Depths</h2>
+            <img loading="lazy" src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/ScreenRecording_04-19-2025_10-21-36_1.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@TY and Co.</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/TOTKSkyandDepths.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="modernios7">
+            <h2>Modern iOS 7</h2>
+            <img loading="lazy" src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/iOS7Modern.gif"/>
+            <p>Created by @thing_on_a_string</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/Modern_iOS_7.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="appleAnimationLucid">
+            <h2>Lucid Apple Animation</h2>
+            <img loading="lazy" src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/AppleLogo2.gif"/>
+            <p>Created by @thing_on_a_string</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/AppleAnim2.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="invincible">
+            <h2>Invincible (iPhone)</h2>
+            <img loading="lazy" src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/invi.gif"/>
+            <p>Created by @vexirale</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/invinsihblih.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="appleAnimationShapes">
+            <h2>Shapes Apple Animation</h2>
+            <img loading="lazy" src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/animatedApple.gif"/>
+            <p>Created by @kylekennedykk</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/AnimatedAppleLogoV2.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="spinningChip">
+            <h2>Spinning Chip</h2>
+            <img loading="lazy" src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/chipspin.gif"/>
+            <p>Created by @stpotato</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/Chip.tendies', '_blank');">Download</button>
+        </div>
+
+        <div class="col" id="appleIntelligence">
+            <h2>Apple Intelligence</h2>
+            <img loading="lazy" src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/ScreenRecording_03-31-2025_17-37-49_1.gif"/>
+            <p>Created by @pengubow</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/AIGradient.tendies', '_blank');">Download</button>
+        </div>
+        <div class="col" id="cubes">
+            <h2>Colored Cube Collection</h2>
+            <img loading="lazy" src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/cubesroll.gif"/>
+            <p>Created by <a href="https://ok-komo.org/" target="_blank" style="text-shadow: 0 0 10px #1d8aff;">@ok.komo</a></p>
+            <button id="downloadBtn">Options</button>
+        </div>
+        <div class="col" id="persona4Teddie">
+            <h2>Persona 4 Teddie</h2>
+            <img loading="lazy" src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/teddie4.gif"/>
+            <p>Created by @aaqil.</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/TeddieP4Golden.tendies', '_blank');">Download</button>
+        </div>
+        <div class="col" id="deanBlunt">
+            <h2>Dean Blunt - Zushi</h2>
+            <img loading="lazy" src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/deanblunt.gif"/>
+            <p>Created by <a href="https://ok-komo.org/" target="_blank" style="text-shadow: 0 0 10px #1d8aff;">@ok.komo</a></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/zushi.tendies', '_blank');">Download</button>
+        </div>
+        <div class="col" id="persona3FEMC">
+            <h2>Persona 3 FeMC</h2>
+            <img loading="lazy" src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/Persona3FEMC.gif"/>
+            <p>Created by <span style="color:#e4fd00; text-shadow: 0 0 10px #ecd611;">@TY and Co.</span></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/P3FEMCTheme.tendies', '_blank');">Download</button>
+        </div>
+        <div class="col" id="altstore">
+            <h2>AltStore</h2>
+            <img loading="lazy" src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/AltStore.gif"/>
+            <p>Created by <a href="https://ok-komo.org/" target="_blank" style="text-shadow: 0 0 10px #1d8aff;">@ok.komo</a></p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/altstore.tendies', '_blank');">Download</button>
+        </div>
+        <div class="col" id="eventhorizon">
+            <h2>Event Horizon</h2>
+            <img loading="lazy" src="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/eventhorizon.gif"/>
+            <p>Created by @stpotato</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/EventHorizon.tendies', '_blank');">Download</button>
+        </div>
+        <div class="popup-overlay" id="popup">
+            <div class="popup-content">
+                <h2>Download a color</h2>
+                <a style="text-shadow: 0 0 10px #1d8aff;" href="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/redcubes.tendies" download>Download Red</a>
+                <a style="text-shadow: 0 0 10px #1d8aff;" href="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/orangecubes.tendies" download>Download Orange</a>
+                <a style="text-shadow: 0 0 10px #1d8aff;" href="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/yellowcubes.tendies" download>Download Yellow</a>
+                <a style="text-shadow: 0 0 10px #1d8aff;" href="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/greencubes.tendies" download>Download Green</a>
+                <a style="text-shadow: 0 0 10px #1d8aff;" href="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/lightbluecubes.tendies" download>Download Light Blue</a>
+                <a style="text-shadow: 0 0 10px #1d8aff;" href="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/darkbluecubes.tendies" download>Download Dark Blue</a>
+                <a style="text-shadow: 0 0 10px #1d8aff;" href="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/blackcubes.tendies" download>Download Black</a>
+                <a style="text-shadow: 0 0 10px #1d8aff;" href="https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/whitecubes.tendies" download>Download White</a>
+                <button class="close-btn" id="closePopup">Close</button>
+            </div>
+        </div>
+      </div>
+
+
+      <script>
+        const downloadBtn = document.getElementById('downloadBtn');
+        const popup = document.getElementById('popup');
+        const closePopup = document.getElementById('closePopup');
+
+        downloadBtn.addEventListener('click', () => {
+        popup.style.display = 'flex';
+        });
+
+        closePopup.addEventListener('click', () => {
+        popup.style.display = 'none';
+        });
+
+        // Optional: close on outside click
+        popup.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            popup.style.display = 'none';
+        }
+        });
+    </script>
+    <!--SEARCH SCRIPT-->
+    <script>
+        const searchInput = document.getElementById('searchInput');
+    
+        searchInput.addEventListener('input', function () {
+            const filter = searchInput.value.toLowerCase();
+            const wallpapers = document.querySelectorAll('.flex-grid-thirds .col');
+    
+            wallpapers.forEach(wallpaper => {
+                const title = wallpaper.querySelector('h2')?.innerText.toLowerCase() || '';
+                const creator = wallpaper.querySelector('p')?.innerText.toLowerCase() || '';
+                if (title.includes(filter) || creator.includes(filter)) {
+                    wallpaper.style.display = '';
+                } else {
+                    wallpaper.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <!--THEME CHANGER AND FOOTER-->
+    <script>
+        function DropClick(id){
+            window.location.replace('#'+id);
+        }
+    </script>
+  <script>
+  let lastScrollY = window.scrollY;
+  const nav = document.querySelector('nav');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY && window.scrollY > 100) {
+      nav.style.top = '-80px'; // Hide
+    } else {
+      nav.style.top = '1%'; // Show
+    }
+    lastScrollY = window.scrollY;
+  });
+  </script>
+    <footer style="text-align: center;"><p>✨Made by <a style="text-shadow: 0 0 10px #1d8aff;" href="https://squair.is-a.dev/" target="_blank">Squair</a> (Glixed).✨</p><p>Add a wallpaper: <a style="text-shadow: 0 0 10px #1d8aff;" href="https://discord.com/users/1039340580012036106" target="_blank">Message me on Discord</a>.<br> Join the <a style="text-shadow: 0 0 10px #1d8aff;" href="https://discord.gg/cowabunga/" target="_blank">Discord server</a>.<br> Visit the <a style="text-shadow: 0 0 10px #1d8aff;" href="https://github.com/squairdev/nugget-docs" target="_blank">Github Repo</a>.</p></footer>
+
+</body>
+</html>
