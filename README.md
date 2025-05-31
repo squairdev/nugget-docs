@@ -33,8 +33,10 @@ Or, [message me](https://discord.com/users/1039340580012036106) on Discord.
 - Nugget Helper: https://squair.is-a.dev/nugget-docs/
 
 - Nugget Errors: https://squair.is-a.dev/nugget-docs/errors
+- Nugget FAQ: https://squair.is-a.dev/nugget-docs/faq
+- Nugget Wallpapers: https://squair.is-a.dev/nugget-docs/wallpapers
 - Nugget: https://github.com/leminlimez/nugget
 - Official Nugget Discord server: https://discord.gg/cowabunga
 ## Credits
-- [Squairdev](https://github.com/squairdev) (Glixed) - Website owner
+- [Squairdev](https://github.com/squairdev) (Glixed) - Website designer
 - [leminlimez](https://github.com/leminlimez) - Nugget developer
