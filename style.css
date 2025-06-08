@@ -1,7 +1,10 @@
+@import url("https://use.typekit.net/kcs5lil.css");
 * {
     box-sizing: border-box;
     transition: background-color 0.3s, color 0.3s;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "myriad-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
   }
 
   body {
@@ -31,17 +34,17 @@
   }
 
   .form-container {
-    background-color: white;
+    /* background-color: white; */
     padding: 30px 20px;
     border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); */
     width: 100%;
     max-width: 400px;
     transition: all 0.5s ease;
   }
 
   body.dark .form-container {
-    background-color: #1a1a1a;
+    /* background-color: #1a1a1a; */
     color: #fff;
   }
 
@@ -101,7 +104,7 @@
   }
 
   .dropdown-content {
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
     border-radius: 10px;
     /* border: solid 3px #868686; */
     width: 80vw;
@@ -111,7 +114,7 @@
   }
 
   body.dark .dropdown-content {
-    background-color: #1f1f1f;
+    /* background-color: #1f1f1f; */
     /* border: solid 3px #868686; */
     color: white;
   }
@@ -132,7 +135,6 @@
     transition: max-height 0.5s ease, opacity 0.5s ease;
     overflow: hidden;
     max-height: 1000px;
-    opacity: 1;
   }
 
   .form-container.collapsed {
@@ -198,3 +200,47 @@ nav > div > p {
 body.dark nav > div > p {
   color: white;
 }
+.dropdown, .dropdown-content, .form-container, nav, nav > div{
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}.dropdown-content{
+  background: rgba(207, 207, 207, 0.05);
+}
+    body {
+      margin: 0;
+      background-color: #000;
+      overflow-x: hidden;
+    }
+
+    /* Fixed full-screen animation container */
+    #line-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .line {
+      position: absolute;
+      left: -100%;
+      height: 5px;
+      background: #4c6fa7;
+      opacity: 0.4;
+      animation: moveLine linear forwards;
+    }
+
+    @keyframes moveLine {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(200vw);
+      }
+    }

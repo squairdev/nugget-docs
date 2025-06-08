@@ -29,7 +29,6 @@
         <div class="help" onclick="window.location.replace('../');"><p><b>Helper</b></p></div>
         <div class="faq" onclick="window.location.replace('../faq/');"><p><b>FAQ</b></p></div>
         <div class="errors" onclick="window.location.replace('../errors/');"><p><b>Errors</b></p></div>
-        <div class="wallpapers" onclick="window.location.replace('../wallpapers');"><p><b>Wallpapers</b></p></div>
     </nav>
     <h1 id="main-title"><br><br>Nugget Helper | Errors</h1>
     
@@ -95,6 +94,29 @@
     }
     lastScrollY = window.scrollY;
   });
+  </script>
+  <div id="line-background"></div>
+  <script>
+    const container = document.getElementById('line-background');
+
+    function createLine() {
+      const line = document.createElement('div');
+      line.classList.add('line');
+
+      const y = Math.random() * window.innerHeight;
+      const width = 100 + Math.random() * 400;
+      const duration = 3 + Math.random() * 3;
+
+      line.style.top = `${y}px`;
+      line.style.width = `${width}px`;
+      line.style.animationDuration = `${duration}s`;
+
+      container.appendChild(line);
+
+      setTimeout(() => line.remove(), duration * 1000);
+    }
+
+    setInterval(createLine, 150);
   </script>
     <footer style="text-align: center;"><p>✨Made by <a style="text-shadow: 0 0 10px #1d8aff;" href="https://squair.is-a.dev/" target="_blank">Squair</a> (Glixed).✨</p><p>Request a feature: <a style="text-shadow: 0 0 10px #1d8aff;" href="https://discord.com/users/1039340580012036106" target="_blank">Message me on Discord</a>.<br> Join the <a style="text-shadow: 0 0 10px #1d8aff;" href="https://discord.gg/cowabunga/" target="_blank">Discord server</a>.<br> Visit the <a style="text-shadow: 0 0 10px #1d8aff;" href="https://github.com/squairdev/nugget-docs" target="_blank">Github Repo</a>.</p></footer>
 
