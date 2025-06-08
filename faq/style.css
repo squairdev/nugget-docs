@@ -1,9 +1,11 @@
+@import url("https://use.typekit.net/kcs5lil.css");
 * {
-  box-sizing: border-box;
-  transition: background-color 0.3s, color 0.3s;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: "myriad-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
 body {
   margin: 0;
   display: flex;
