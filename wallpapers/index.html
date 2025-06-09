@@ -529,6 +529,12 @@
             <p>Created by @stpotato</p>
             <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/EventHorizon.tendies', '_blank');">Download</button>
         </div>
+        <div class="col" id="solarSystem">
+            <h2>Solar System</h2>
+            <img src="/wallpapers/downloads/solar.gif"/>
+            <p>Created by <a href="https://squair.is-a.dev/" target="_blank" style="text-shadow: 0 0 10px #1d8aff;">@glixed.</a> (me!)</p>
+            <button onclick="window.open('https://github.com/squairdev/nugget-docs/raw/refs/heads/main/wallpapers/downloads/solarOLED.tendies', '_blank');">Download</button>
+        </div>
         <div class="popup-overlay" id="popup">
             <div class="popup-content">
                 <h2>Download a color</h2>
@@ -604,6 +610,29 @@
     }
     lastScrollY = window.scrollY;
   });
+  </script>
+  <div id="line-background"></div>
+  <script>
+    const container = document.getElementById('line-background');
+
+    function createLine() {
+      const line = document.createElement('div');
+      line.classList.add('line');
+
+      const y = Math.random() * window.innerHeight;
+      const width = 100 + Math.random() * 400;
+      const duration = 3 + Math.random() * 3;
+
+      line.style.top = `${y}px`;
+      line.style.width = `${width}px`;
+      line.style.animationDuration = `${duration}s`;
+
+      container.appendChild(line);
+
+      setTimeout(() => line.remove(), duration * 1000);
+    }
+
+    setInterval(createLine, 150);
   </script>
     <footer style="text-align: center;"><p>✨Made by <a style="text-shadow: 0 0 10px #1d8aff;" href="https://squair.is-a.dev/" target="_blank">Squair</a> (Glixed).✨</p><p>Add a wallpaper: <a style="text-shadow: 0 0 10px #1d8aff;" href="https://discord.com/users/1039340580012036106" target="_blank">Message me on Discord</a>.<br> Join the <a style="text-shadow: 0 0 10px #1d8aff;" href="https://discord.gg/cowabunga/" target="_blank">Discord server</a>.<br> Visit the <a style="text-shadow: 0 0 10px #1d8aff;" href="https://github.com/squairdev/nugget-docs" target="_blank">Github Repo</a>.</p></footer>
 
