@@ -1,10 +1,10 @@
-@import url("https://use.typekit.net/kcs5lil.css");
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&amp;display=swap');
+
 * {
     box-sizing: border-box;
     transition: background-color 0.3s, color 0.3s;
-    font-family: "myriad-pro", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
   }
 
   body {
@@ -244,3 +244,12 @@ body.dark nav > div > p {
         transform: translateX(200vw);
       }
     }
+footer > p {
+    display: inline-block;
+    background: rgba(145, 145, 145, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 16px;
+}

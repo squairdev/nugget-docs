@@ -22,31 +22,26 @@
   <meta content="https://github.com/squairdev/nugget-docs/blob/main/image/NuggetHelperLogo.png?raw=true" property="og:image" />
   <meta content="#11000a" data-react-helmet="true" name="theme-color" />
   <link rel="icon" type="image/x-icon" href="https://github.com/squairdev/nugget-docs/blob/main/image/NuggetHelperCircle.png?raw=true">
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body class="dark">
-    <nav>
+    <!-- <nav>                        ✨fuck my life✨
+                                  im glad yall happy
+                                  I may not last long
       <div class="help" onclick="window.location.replace('');"><p><b>Helper</b></p></div>
       <div class="faq" onclick="window.location.replace('faq/');"><p><b>FAQ</b></p></div>
       <div class="errors" onclick="window.location.replace('errors/');"><p><b>Errors</b></p></div>
       <div class="wallpapers" onclick="window.location.replace('wallpapers/');"><p><b>Wallpapers</b></p></div>
-    </nav>
+    </nav> -->
     <!--START OF APPLY-->
     <h1 id="main-title"><br><br>Nugget Helper</h1>
     <div class="form-container" id="formBox">
       <div class="form-group">
-        <label for="device">iPhone or iPad</label>
-        <select id="device" name="device">
-          <option value="">Select your device</option>
-          <option value="iphone">iPhone</option>
-          <option value="ipad">iPad</option>
-        </select>
-      </div>
-      <div class="form-group">
         <label for="ios-version">iOS Version</label>
         <select id="ios-version" name="ios-version">
           <option value="">Select iOS version</option>
-          <option value="18up">iOS 18.3+</option>
+          <option value="18up">iOS 18.3+ (Including iOS 26+)</option>
           <option value="3db">iOS 18.2 Developer Beta 3</option>
           <option value="2db">iOS 18.2 Developer Beta 2</option>
           <option value="18.1.1">iOS 18.1.1</option>
@@ -63,7 +58,7 @@
           <option value="">Select OS</option>
           <option value="mac">MacOS</option>
           <option value="windows">Windows</option>
-          <option value="linux">Linux (python version)</option>
+          <!-- <option value="linux">Linux (python version)</option> -->
         </select>
       </div>
       <button id="submitBtn" type="submit">Submit</button>
@@ -122,7 +117,7 @@
     <!--POSTERBOARD INFO-->
     <button class="dropdown" id="pbBtn"  onclick="DropClick('pbBtn')"><span class="tag">#</span> Posterboard</button>
     <div class="dropdown-content" id="posterboard"><span style="font-size:25px;">✅ Posterboard is supported on this iOS/iPadOS version.</span><br><br>
-        You can get wallpapers from <a style="text-shadow: 0 0 10px #1d8aff;" target="_blank" href="https://squair.is-a.dev/nugget-docs/wallpapers">here</a>, or <a style="text-shadow: 0 0 10px #1d8aff;" target="_blank" href="https://discord.gg/xB9Y9rNx3n">this discord server</a>.<br>
+        You can get wallpapers from <a style="text-shadow: 0 0 10px #1d8aff;" target="_blank" href="https://discord.gg/xB9Y9rNx3n">this discord server</a> or <a href="https://cowabun.ga/wallpapers">here</a>.<br>
         Download the '.tendies' file that you would like, then open Nugget. Navigate to the Posterboard section and<br>
         click 'Import .tendies' (if you cannot click it, check the 'modify' box at the top of the screen).
         Go to the Apply tab and click 'Apply'. If you need more help, watch <a style="text-shadow: 0 0 10px #1d8aff;" target="_blank" href="https://youtu.be/gyxlNpRfcwA">this tutorial</a>.</div>
@@ -158,8 +153,16 @@
         iOS/iPadOS 18-18.2 Developer Beta 2.</div>
 
     <button class="dropdown" id="statusBtn"  onclick="DropClick('statusBtn')"><span class="tag">#</span> Status Bar</button>
-    <div class="dropdown-content" id="AlwaysOnDisplay" style="display: block;"><span style="font-size:25px;">✅ Status Bar is supported on all versions.</span><br><br>
+    <div class="dropdown-content" id="statusBtn" style="display: block;"><span style="font-size:25px;">✅ Status Bar is supported on all versions.</span><br><br>
         Not much to say here... It's supported.</div>
+
+    <button class="dropdown" id="ppBtn" onclick="DropClick('ppBtn')"><span class="tag">#</span> Pocket Poster</button>
+    <div class="dropdown-content" id="pp"><span style="font-size:25px;">✅ Pocket Poster is supported on this iOS/iPadOS version.</span><br><br>
+        Read <a style="text-shadow: 0 0 10px #1d8aff;" href="https://squair.is-a.dev/pocketposter">the tutorial</a>.</div>
+    <div class="dropdown-content" id="ppNot"><span style="font-size:25px;">❌ Pocket Poster is not supported on this iOS/iPadOS version.</span><br><br>
+        Supported versions:<br>
+        iOS/iPadOS 17+. Support for iOS 16 will come in later versions.</div>
+
 </div>
   <div style="text-align:center; margin-top: 10px;">
     <button id="toggleFormBtn">Hide Setup Panel</button>
@@ -204,6 +207,7 @@
       const diSupported = ['17', '18', '18.1.1', '2db'];
       const aodSupported = ['18', '18.1.1', '2db'];
       const pbSupported = ['18up', '3db', '2db', '18.1.1', '18', '17.7.6', '17', '16'];
+      const ppSupported = ['18up', '3db', '2db', '18.1.1', '18', '17.7.6', '17'];
       const iswin = ['windows']
       const islinux = ['linux']
       if (ios=='16under'){
@@ -215,6 +219,7 @@
       document.getElementById("mgsBtn").style.display = 'block';
       document.getElementById("pbBtn").style.display = 'block';
       document.getElementById("setupBtn").style.display = 'block';
+      document.getElementById("ppBtn").style.display = 'block';
       if (mgSupported.includes(ios)) {
         document.getElementById('mobilegestalt').style.display = 'block';
         document.getElementById('mobilegestaltNot').style.display = 'none';
@@ -247,10 +252,27 @@
       if (pbSupported.includes(ios)) {
         document.getElementById('posterboard').style.display = 'block';
         document.getElementById('posterboardNot').style.display = 'none';
-        } else {
+      } else {
         document.getElementById('posterboardNot').style.display = 'block';
         document.getElementById('posterboard').style.display = 'none';
-        }
+      }
+
+      if (pbSupported.includes(ios)) {
+        document.getElementById('pp').style.display = 'block';
+        document.getElementById('ppNot').style.display = 'none';
+      } else {
+        document.getElementById('ppNot').style.display = 'block';
+        document.getElementById('pp').style.display = 'none';
+      }
+
+      if (ppSupported.includes(ios)) {
+        document.getElementById('pp').style.display = 'block';
+        document.getElementById('ppNot').style.display = 'none';
+      } else {
+        document.getElementById('ppNot').style.display = 'block';
+        document.getElementById('pp').style.display = 'none';
+      }
+
 
         document.getElementById('setupWin').style.display = os === 'windows' ? 'block' : 'none';
         document.getElementById('setupMac').style.display = os === 'mac' ? 'block' : 'none';
@@ -295,14 +317,21 @@
 window.addEventListener('DOMContentLoaded', () => {
   const { device, ios, os } = parseQueryParams();
 
-  document.getElementById('device').value = device;
+  if (document.getElementById('device')) {
+    document.getElementById('device').value = device;
+  }
   document.getElementById('ios-version').value = ios;
   document.getElementById('os').value = os;
 
-  if (ios && os) {
+  if (ios || os) {
     showSections(ios, os);
+    const formBox = document.getElementById('formBox');
+    const toggleButton = document.getElementById("toggleFormBtn");
+    formBox.classList.add("collapsed");
+    toggleButton.textContent = "Show Setup Panel";
   }
 });
+
 
   </script>
   <script>
@@ -342,6 +371,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
     setInterval(createLine, 150);
   </script>
-  <footer style="text-align: center;"><p>✨Made by <a style="text-shadow: 0 0 10px #1d8aff;" href="https://squair.is-a.dev/" target="_blank">Squair</a> (Glixed).✨</p><p>Request a feature: <a style="text-shadow: 0 0 10px #1d8aff;" href="https://discord.com/users/1039340580012036106" target="_blank">Message me on Discord</a>.<br> Join the <a style="text-shadow: 0 0 10px #1d8aff;" href="https://discord.gg/cowabunga/" target="_blank">Discord server</a>.<br> Visit the <a style="text-shadow: 0 0 10px #1d8aff;" href="https://github.com/squairdev/nugget-docs" target="_blank">Github Repo</a>.</p></footer>
+  <footer style="text-align: center;">
+    <p>✨Made by <a style="text-shadow: 0 0 10px #1d8aff;" href="https://squair.is-a.dev/" target="_blank">Squair</a> (Glixed).✨
+    <br> Join the <a style="text-shadow: 0 0 10px #1d8aff;" href="https://discord.gg/cowabunga/" target="_blank">Discord server</a>.
+    <br> Visit the <a style="text-shadow: 0 0 10px #1d8aff;" href="https://github.com/squairdev/nugget-docs" target="_blank">Github Repo</a>.</p>
+</footer>
   </body>
 </html>
